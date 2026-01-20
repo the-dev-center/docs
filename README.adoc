@@ -1,4 +1,4 @@
-= Dev Center Documentation Playbook
+= Dev Center Documentation
 
 This repository contains the Antora playbook and configuration for the **Dev Center** documentation site. It aggregates content from multiple sources to build a unified documentation portal.
 
