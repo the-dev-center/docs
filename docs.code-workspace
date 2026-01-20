@@ -1,0 +1,77 @@
+{
+	"folders": [
+		{
+			"name": "Dev Center Docs Playbook",
+			"path": "."
+		},
+		{
+			"name": "Dev Center",
+			"path": "../dev-center"
+		}
+	],
+	"settings": {
+		"git.autoRepositoryDetection": true,
+		"search.exclude": {
+			"**/node_modules": true,
+			"**/build": true,
+			"**/dist": true,
+			"**/.git": true,
+			"**/target": true
+		},
+		"files.watcherExclude": {
+			"**/node_modules/**": true,
+			"**/build/**": true,
+			"**/dist/**": true,
+			"**/.git/**": true,
+			"**/target/**": true
+		},
+		"editor.tabSize": 2,
+		"editor.insertSpaces": true,
+		"editor.detectIndentation": true,
+		"files.trimTrailingWhitespace": true,
+		"files.insertFinalNewline": true,
+		"files.trimFinalNewlines": true,
+		"[asciidoc]": {
+			"editor.wordWrap": "on",
+			"editor.formatOnSave": true
+		},
+		"[markdown]": {
+			"editor.wordWrap": "on"
+		},
+		"asciidoc.preview.attributes": {
+			"toc": "left",
+			"toclevels": 3,
+			"icons": "font",
+			"sectanchors": true,
+			"sectlinks": true,
+			"source-highlighter": "highlight.js"
+		},
+		"powershell.cwd": "Dev Center Docs Playbook",
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true,
+		"[json]": {
+			"editor.defaultFormatter": "biomejs.biome"
+		},
+		"[jsonc]": {
+			"editor.defaultFormatter": "biomejs.biome"
+		},
+		"[javascript]": {
+			"editor.defaultFormatter": "biomejs.biome"
+		},
+		"[typescript]": {
+			"editor.defaultFormatter": "biomejs.biome"
+		},
+		"[css]": {
+			"editor.defaultFormatter": "biomejs.biome"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"asciidoctor.asciidoctor-vscode",
+			"esbenp.prettier-vscode",
+			"redhat.vscode-yaml",
+			"biomejs.biome",
+			"bradlc.vscode-tailwindcss"
+		]
+	}
+}

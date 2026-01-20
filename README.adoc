@@ -1,0 +1,44 @@
+= Dev Center Documentation Playbook
+
+This repository contains the Antora playbook and configuration for the **Dev Center** documentation site. It aggregates content from multiple sources to build a unified documentation portal.
+
+== Project Structure
+
+* `antora-playbook.yml`:: The main Antora configuration file that defines content sources and UI settings.
+* `docs.code-workspace`:: VS Code workspace file configured for multi-root editing across documentation sources.
+* `package.json`:: Defines dependencies, primarily the `antora` engine.
+
+== Prerequisites
+
+* link:https://nodejs.org/[Node.js] (LTS recommended)
+* link:https://pnpm.io/[pnpm]
+
+== Usage
+
+=== Installation
+
+Install the required dependencies using pnpm:
+
+[source,powershell]
+----
+pnpm install
+----
+
+=== Building the Site
+
+To generate the documentation site locally:
+
+[source,powershell]
+----
+pnpm antora antora-playbook.yml
+----
+
+The output will be generated in the `build/site` directory (or as configured in the playbook).
+
+== Development
+
+This project is best managed using the included VS Code workspace:
+
+1. Open `docs.code-workspace` in VS Code.
+2. Ensure the recommended extensions are installed (AsciiDoc, YAML, etc.).
+3. Use the integrated terminal for running builds.
