@@ -1,5 +1,4 @@
 = The Dev Center Portal
-:page-layout: home
 
 Welcome to the central hub for all project documentation. Select a repository below to explore its specific guides and reference materials.
 
@@ -11,11 +10,11 @@ Welcome to the central hub for all project documentation. Select a repository be
 Main developer tooling and project management application.
 Includes: Onboarding, Flutter/Tailwind setup, and Git management guides.
 
-xref:dev-center:index.adoc[Explore Dev Center Docs]
+xref:dev-center:ROOT:index.adoc[Explore Dev Center Docs]
 
 [.card]
 === 📄 Docs Playbook
 Configuration and playbook for this documentation site.
 Contains the Antora setup and local development guides.
 
-xref:home:index.adoc[You are here]
+xref:home:ROOT:index.adoc[You are here]
