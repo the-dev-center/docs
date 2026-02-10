@@ -9,6 +9,21 @@ content:
     - url: https://github.com/the-dev-center/dev-center.git
       branches: HEAD
       start_path: docs
+    - url: https://github.com/the-dev-center/antora-dark-theme.git
+      branches: HEAD
+      start_path: docs
+    - url: https://github.com/the-dev-center/antora-demo-template.git
+      branches: HEAD
+      start_path: docs
+    - url: https://github.com/the-dev-center/antora-extensions-registry.git
+      branches: HEAD
+      start_path: docs
+    - url: https://github.com/the-dev-center/antora-themes-site.git
+      branches: HEAD
+      start_path: docs
+    - url: https://github.com/the-dev-center/templates.git
+      branches: HEAD
+      start_path: docs
 ui:
   bundle:
     url: Z:/code/amdphreak/antora-ui-default/build/ui-bundle.zip

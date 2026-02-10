@@ -11,11 +11,26 @@ content:
       branches: HEAD
       start_path: docs
       worktrees: true
-      exclude:
-        - "**/node_modules/**"
-        - "site/**"
-        - "**/build/**"
-        - ".pnpm-store/**"
+    - url: ../antora-dark-theme
+      branches: HEAD
+      start_path: docs
+      worktrees: true
+    - url: ../antora-demo-template
+      branches: HEAD
+      start_path: docs
+      worktrees: true
+    - url: ../antora-extensions-registry
+      branches: HEAD
+      start_path: docs
+      worktrees: true
+    - url: ../antora-themes-site
+      branches: HEAD
+      start_path: docs
+      worktrees: true
+    - url: ../templates
+      branches: HEAD
+      start_path: docs
+      worktrees: true
 ui:
   bundle:
     url: https://gitlab.com/the-dev-center/antora-dark-theme/releases/download/latest/ui-bundle.zip
