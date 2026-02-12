@@ -3,28 +3,18 @@
 		{
 			"name": "Dev Center Docs Playbook",
 			"path": "."
-		},
-		{
-			"name": "Dev Center",
-			"path": "../dev-center"
 		}
 	],
+	"extensions": {
+		"recommendations": [
+			"asciidoctor.asciidoctor-vscode",
+			"dprint.dprint",
+			"biomejs.biome",
+			"redhat.vscode-yaml",
+			"bradlc.vscode-tailwindcss"
+		]
+	},
 	"settings": {
-		"git.autoRepositoryDetection": true,
-		"search.exclude": {
-			"**/node_modules": true,
-			"**/build": true,
-			"**/dist": true,
-			"**/.git": true,
-			"**/target": true
-		},
-		"files.watcherExclude": {
-			"**/node_modules/**": true,
-			"**/build/**": true,
-			"**/dist/**": true,
-			"**/.git/**": true,
-			"**/target/**": true
-		},
 		"editor.tabSize": 2,
 		"editor.insertSpaces": true,
 		"editor.detectIndentation": true,
@@ -53,7 +43,7 @@
 			"source.fixAll.markdownlint": "explicit"
 		},
 
-		// IMPORTANT: Language-specific overrides are required to ensure workspace settings 
+		// IMPORTANT: Language-specific overrides are required to ensure workspace settings
 		// take precedence over any individual User-level language defaults (like Prettier).
 		"[javascript]": { "editor.defaultFormatter": "dprint.dprint" },
 		"[typescript]": { "editor.defaultFormatter": "dprint.dprint" },
@@ -63,15 +53,22 @@
 		"[jsonc]": { "editor.defaultFormatter": "dprint.dprint" },
 		"[code-workspace]": { "editor.defaultFormatter": "dprint.dprint" },
 		"[css]": { "editor.defaultFormatter": "dprint.dprint" },
-		"[graphql]": { "editor.defaultFormatter": "dprint.dprint" }
-	},
-	"extensions": {
-		"recommendations": [
-			"asciidoctor.asciidoctor-vscode",
-			"dprint.dprint",
-			"biomejs.biome",
-			"redhat.vscode-yaml",
-			"bradlc.vscode-tailwindcss"
-		]
+		"[graphql]": { "editor.defaultFormatter": "dprint.dprint" },
+
+		"git.autoRepositoryDetection": false,
+		"search.exclude": {
+			"**/node_modules": true,
+			"**/build": true,
+			"**/dist": true,
+			"**/.git": true,
+			"**/target": true
+		},
+		"files.watcherExclude": {
+			"**/node_modules/**": true,
+			"**/build/**": true,
+			"**/dist/**": true,
+			"**/.git/**": true,
+			"**/target/**": true
+		},
 	}
 }
