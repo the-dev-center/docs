@@ -4,9 +4,13 @@ This repository contains the Antora playbook and configuration for the **Dev Cen
 
 == Project Structure
 
-* `antora-playbook.yml`:: The main Antora configuration file that defines content sources and UI settings.
+* `antora-playbook.online.yml`:: The production Antora playbook. Uses remote GitHub URLs for all content sources and the published UI bundle. Used by CI/CD.
+* `antora-playbook.example.yml`:: A committed template for the local dev playbook. Copy this to `antora-playbook.yml` to get started.
+* `antora-playbook.yml`:: Your local dev playbook (Git-ignored). Extends `antora-playbook.online.yml` but overrides content sources with local sibling directories.
+* `antora-playbook.testing.example.yml`:: A committed template for full local testing. Copy this to `antora-playbook.testing.yml`.
+* `antora-playbook.testing.yml`:: Full local testing playbook (Git-ignored). Extends `antora-playbook.yml` and additionally overrides the UI bundle with a local build.
 * `docs.code-workspace`:: VS Code workspace file configured for multi-root editing across documentation sources.
-* `package.json`:: Defines dependencies, primarily the `antora` engine.
+* `package.json`:: Defines dependencies and build scripts.
 
 == Prerequisites
 
@@ -24,13 +28,40 @@ Install the required dependencies using pnpm:
 pnpm install
 ----
 
-=== Building the Site
+=== Getting Started (Local Development)
 
-To generate the documentation site locally:
+Copy the example playbook to create your local config:
 
 [source,powershell]
 ----
-pnpm antora antora-playbook.yml
+cp antora-playbook.example.yml antora-playbook.yml
+----
+
+Then build the site locally:
+
+[source,powershell]
+----
+pnpm build
+----
+
+=== Testing Local Plugins / UI
+
+To also use a local UI bundle (e.g., when developing themes):
+
+[source,powershell]
+----
+cp antora-playbook.testing.example.yml antora-playbook.testing.yml
+# Edit antora-playbook.testing.yml to point to your local UI bundle
+pnpm build:testing
+----
+
+=== Production / CI Build
+
+To build with remote sources (as CI does):
+
+[source,powershell]
+----
+pnpm build:online
 ----
 
 The output will be generated in the `build/site` directory (or as configured in the playbook).

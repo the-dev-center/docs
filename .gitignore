@@ -5,6 +5,9 @@ node_modules/
 # Antora build output
 build/
 .cache/
+antora-playbook.yml
+antora-playbook.testing*.yml
+!antora-playbook.testing*.example.yml
 
 # IDEs and editors
 .vscode/
