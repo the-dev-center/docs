@@ -1,0 +1,39 @@
+﻿extends: ./antora-playbook.online.yml
+site:
+  title: Dev Center Docs (Local)
+content:
+  sources:
+    - url: .
+      branches: HEAD
+      start_path: docs
+      worktrees: true
+    - url: ../dev-center
+      branches: HEAD
+      start_path: docs
+      worktrees: true
+    - url: ../antora-dark-theme
+      branches: HEAD
+      start_path: docs
+      worktrees: true
+    - url: ../antora-demo-template
+      branches: HEAD
+      start_path: docs
+      worktrees: true
+    - url: ../antora-extensions-registry
+      branches: HEAD
+      start_path: docs
+      worktrees: true
+    - url: ../antora-themes-site
+      branches: HEAD
+      start_path: docs
+      worktrees: true
+    - url: ../templates
+      branches: HEAD
+      start_path: docs
+      worktrees: true
+    - url: ../msi-generator
+      branches: HEAD
+      start_path: docs
+      worktrees: true
+output:
+  dir: ./build/site

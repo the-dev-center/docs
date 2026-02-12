@@ -1,0 +1,7 @@
+﻿extends: ./antora-playbook.example.yml
+site:
+  title: Dev Center Docs (Local Test)
+ui:
+  bundle:
+    url: Z:/code/amdphreak/antora-ui-default/build/ui-bundle.zip
+    snapshot: true
