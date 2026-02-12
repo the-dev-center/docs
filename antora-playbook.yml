@@ -24,6 +24,9 @@ content:
     - url: https://github.com/the-dev-center/templates.git
       branches: HEAD
       start_path: docs
+    - url: https://github.com/the-dev-center/msi-generator.git
+      branches: HEAD
+      start_path: docs
 ui:
   bundle:
     url: https://gitlab.com/the-dev-center/antora-dark-theme/releases/download/latest/ui-bundle.zip

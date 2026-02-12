@@ -1,44 +1,7 @@
-﻿site:
-  title: Dev Center Docs (Local)
-  start_page: home::index.adoc
-content:
-  sources:
-    - url: .
-      branches: HEAD
-      start_path: docs
-      worktrees: true
-    - url: ../dev-center
-      branches: HEAD
-      start_path: docs
-      worktrees: true
-    - url: ../antora-dark-theme
-      branches: HEAD
-      start_path: docs
-      worktrees: true
-    - url: ../antora-demo-template
-      branches: HEAD
-      start_path: docs
-      worktrees: true
-    - url: ../antora-extensions-registry
-      branches: HEAD
-      start_path: docs
-      worktrees: true
-    - url: ../antora-themes-site
-      branches: HEAD
-      start_path: docs
-      worktrees: true
-    - url: ../templates
-      branches: HEAD
-      start_path: docs
-      worktrees: true
+﻿extends: ./antora-playbook-local.yml
+site:
+  title: Dev Center Docs (Local Test)
 ui:
   bundle:
     url: Z:/code/amdphreak/antora-ui-default/build/ui-bundle.zip
     snapshot: true
-  supplemental_files: ./supplemental-ui
-output:
-  dir: ./build/site
-asciidoc:
-  attributes:
-    experimental: ''
-    page-pagination: ''

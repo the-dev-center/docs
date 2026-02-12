@@ -1,6 +1,6 @@
-﻿site:
+﻿extends: ./antora-playbook.yml
+site:
   title: Dev Center Docs (Local)
-  start_page: home::index.adoc
 content:
   sources:
     - url: .
@@ -31,14 +31,9 @@ content:
       branches: HEAD
       start_path: docs
       worktrees: true
-ui:
-  bundle:
-    url: https://gitlab.com/the-dev-center/antora-dark-theme/releases/download/latest/ui-bundle.zip
-    snapshot: true
-  supplemental_files: ./supplemental-ui
+    - url: ../msi-generator
+      branches: HEAD
+      start_path: docs
+      worktrees: true
 output:
   dir: ./build/site
-asciidoc:
-  attributes:
-    experimental: ''
-    page-pagination: ''
