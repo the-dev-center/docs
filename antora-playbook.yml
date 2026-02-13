@@ -1,4 +1,4 @@
-﻿extends: ./antora-playbook.online.yml
+﻿extends: ./antora-playbook.live.yml
 site:
   title: Dev Center Docs (Local)
 content:
