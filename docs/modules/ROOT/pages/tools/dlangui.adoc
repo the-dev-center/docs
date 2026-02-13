@@ -1,0 +1,12 @@
+= dlangui Documentation
+
+`dlangui` is a cross-platform GUI library for D language.
+
+== Overview
+
+It provides a rich set of widgets and supports various backends (Win32, X11, SDL, etc.).
+
+== Resources
+
+* **Repository**: link:https://github.com/buggins/dlangui[buggins/dlangui]
+* **Documentation**: See the repository wiki or source code for details.
