@@ -1,0 +1,16 @@
+= MSI Generator Documentation
+
+This tool generates Windows installers (MSI/MSIX) for D applications.
+
+== Overview
+
+It simplifies the process of creating installers by providing a JSON-based configuration.
+
+== Features
+
+* **Cross-platform**: Written in D, can run on Windows, Linux, and macOS (generating Windows installers).
+* **Automated**: Integrate into CI/CD pipelines.
+
+== Usage
+
+See the `README.md` in the link:https://github.com/the-dev-center/msi-generator[msi-generator repository] for usage instructions.
