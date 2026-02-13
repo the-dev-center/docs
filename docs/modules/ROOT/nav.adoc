@@ -1,1 +1,6 @@
 * xref:index.adoc[Home]
+* xref:tools/index.adoc[Tools]
+** xref:tools/code-d.adoc[code-d]
+** xref:tools/dprint.adoc[dprint]
+** xref:tools/dlangui.adoc[dlangui]
+** xref:tools/msi-generator.adoc[MSI Generator]
