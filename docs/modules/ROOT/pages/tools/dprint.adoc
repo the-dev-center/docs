@@ -1,0 +1,22 @@
+= dprint Documentation
+
+`dprint` is a pluggable and configurable code formatting platform.
+
+== Features
+
+* **Fast**: Designed for speed.
+* **Extensible**: Supports plugins for various languages (TypeScript, JSON, Markdown, etc.).
+* **Configurable**: Use a `dprint.json` file to configure formatting rules.
+
+== Installation
+
+You can install `dprint` via the VS Code extension or as a CLI tool.
+
+=== VS Code Extension
+
+1. Install the link:https://marketplace.visualstudio.com/items?itemName=dprint.dprint[dprint extension].
+2. Configure it in your `settings.json`.
+
+=== CLI Tool
+
+See the link:https://dprint.dev[official documentation] for CLI installation instructions.
