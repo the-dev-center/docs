@@ -8,12 +8,12 @@ This repository contains the Antora playbook and configuration for the **Dev Cen
 * `antora-playbook.yml`:: The local dev playbook. Configured for local sibling directories and the `dev-centr` organization structure.
 * `antora-playbook.example.yml`:: A committed template for the local dev playbook.
 * `antora-playbook.testing.example.yml`:: A committed template for full local testing.
+* `docs.code-workspace`:: VS Code workspace file configured for multi-root editing across documentation sources.
+* `package.json`:: Defines dependencies and build scripts.
 
 == 🌍 Site URL
 
 The documentation site is hosted at link:https://docs.devcentr.org[docs.devcentr.org].
-* `docs.code-workspace`:: VS Code workspace file configured for multi-root editing across documentation sources.
-* `package.json`:: Defines dependencies and build scripts.
 
 == Prerequisites
 
