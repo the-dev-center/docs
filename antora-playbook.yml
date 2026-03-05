@@ -1,4 +1,4 @@
-﻿site:
+site:
   title: Dev Center Docs (Local)
   start_page: home::index.adoc
 content:
@@ -7,7 +7,7 @@ content:
       branches: HEAD
       start_path: docs
       worktrees: true
-    - url: ../devcntr
+    - url: ../devcentr
       branches: HEAD
       start_path: docs
       worktrees: true
@@ -31,14 +31,16 @@ content:
       branches: HEAD
       start_path: docs
       worktrees: true
-    - url: ../msi-generator
+    - url: ../msi-installer-generator
       branches: HEAD
       start_path: docs
       worktrees: true
 ui:
   bundle:
-    url: https://github.com/devcntr-org/antora-dark-theme/releases/latest/download/ui-bundle.zip
+    url: https://github.com/asciidoc-supplemental/antora-dark-theme/releases/latest/download/ui-bundle.zip
     snapshot: true
   supplemental_files: ./supplemental-ui
 output:
   dir: ./build/site
+
+

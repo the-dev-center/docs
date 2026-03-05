@@ -5,7 +5,7 @@ _Exported on 1/19/2026 at 18:18:03 CST from Cursor (2.3.41)_
 
 **User**
 
-organize Z:\code\devcntr-app\dev-center\docs\modules\knowledge-base . show plan first
+organize Z:\code\dev-centr\dev-center\docs\modules\knowledge-base . show plan first
 
 ---
 
@@ -13,7 +13,7 @@ organize Z:\code\devcntr-app\dev-center\docs\modules\knowledge-base . show plan 
 
 I've analyzed the current structure of the `knowledge-base` module and found several inconsistencies in file naming, directory organization, and navigation.
 
-Here is the proposed plan to organize `Z:\code\devcntr-app\dev-center\docs\modules\knowledge-base`:
+Here is the proposed plan to organize `Z:\code\dev-centr\dev-center\docs\modules\knowledge-base`:
 
 ### 1. File Renaming & Standardization
 Standardize all files to use **kebab-case** and ensure main section files are named `index.adoc` for consistency with the `development-tools` pattern.
@@ -755,7 +755,7 @@ Node.js projects often contain configuration files for package managers:
 
 ```
 
-I have completed the reorganization and standardization of the `Z:\code\devcntr-app\dev-center\docs\modules\knowledge-base` directory.
+I have completed the reorganization and standardization of the `Z:\code\dev-centr\dev-center\docs\modules\knowledge-base` directory.
 
 ### Summary of Changes
 
@@ -873,7 +873,7 @@ I will create a new directory structure that reflects these levels:
 
 **User**
 
-Based on the diataxis model mentioned in @z:\code\devcntr-app\dev-center\docs\User Documentation Learning Modes.md  generate distinct documentation for each mode of learning in their own trees and make the user choose between them on the documentation front page. Front page should be orientation to the documentation with a quick introduction to the app's purpose first. If done correctly, common snippets should be shared between documents. Formulate a plan. Use the Ordering in @z:\code\devcntr-app\dev-center\docs\Organizing Development Layers_ Two Models.md 's onboarding section for the tutorial mode. The tool recommendations page should be separate from the orientation/front page perhaps in the reference section, but a small link, mention, or snippet should be embedded in the front page.
+Based on the diataxis model mentioned in @z:\code\dev-centr\dev-center\docs\User Documentation Learning Modes.md  generate distinct documentation for each mode of learning in their own trees and make the user choose between them on the documentation front page. Front page should be orientation to the documentation with a quick introduction to the app's purpose first. If done correctly, common snippets should be shared between documents. Formulate a plan. Use the Ordering in @z:\code\dev-centr\dev-center\docs\Organizing Development Layers_ Two Models.md 's onboarding section for the tutorial mode. The tool recommendations page should be separate from the orientation/front page perhaps in the reference section, but a small link, mention, or snippet should be embedded in the front page.
 
 ---
 

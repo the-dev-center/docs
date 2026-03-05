@@ -13,5 +13,6 @@ It simplifies the process of creating installers by providing a JSON-based confi
 
 == Usage
 
-See the `README.md` in the link:https://github.com/devcntr-app/msi-generator[msi-generator repository] for usage instructions.
+See the `README.md` in the link:https://github.com/dev-centr/msi-installer-generator[msi-generator repository] for usage instructions.
+
 
