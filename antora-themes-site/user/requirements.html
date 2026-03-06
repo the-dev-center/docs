@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Requirements :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/antora-themes-site/user/requirements.html">
+    <meta name="description" content="What your theme needs to be listed in the gallery">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/site-extra.css">
+<script>
+(function () {
+  const themeKey = 'antora-theme';
+  const savedTheme = localStorage.getItem(themeKey);
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-theme');
+  }
+})();
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.devcentr.org">Dev-Centr Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora-themes-site" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Antora Themes Gallery</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Theme Developers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Getting Started</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="requirements.html">Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="template.html">Using the Template</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="github-action.html">GitHub Action Setup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="submitting.html">Submitting Your Theme</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Administrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../admin/index.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../admin/concept.html">Design Decisions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../admin/architecture.html">Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Deployment</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../admin/setup.html">Setup Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../admin/environment.html">Environment Variables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../admin/authentication.html">Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../admin/database.html">Database Schema</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora Themes Gallery</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../antora-dark-theme/0.1/guide/index.html">Antora Dark Theme</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../antora-dark-theme/0.1/guide/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../registry/index.html">Antora Extensions Registry</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Antora Themes Gallery</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../DevCentr/index.html">DevCentr</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../msi-generator/index.html">MSI/MSIX Generator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../msi-generator/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../home/index.html">Project Portal</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../samples/1.0/index.html">Samples</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../samples/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../templates/index.html">Templates</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../templates/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Antora Themes Gallery</a></li>
+    <li>For Theme Developers</li>
+    <li><a href="requirements.html">Requirements</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/asciidoc-supplemental/antora-themes-site/edit/main/docs/modules/user/pages/requirements.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Requirements</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>To be listed in the Antora Themes Gallery, your theme must meet these requirements.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_required"><a class="anchor" href="#_required"></a>Required</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Requirement</th>
+<th class="tableblock halign-left valign-top">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Public Repository</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Your theme must be in a public GitHub repository</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Live Demo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A working preview site hosted on GitHub Pages (or similar)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preview Screenshot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A <code>preview.png</code> file in your repository root</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_repository_structure"><a class="anchor" href="#_repository_structure"></a>Repository Structure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Your repository should be a valid Antora UI theme with at minimum:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">your-theme/
+├── src/
+│   ├── css/
+│   ├── js/
+│   ├── layouts/
+│   ├── partials/
+│   └── helpers/
+├── preview.png          <i class="conum" data-value="1"></i><b>(1)</b>
+├── gulpfile.js
+└── package.json</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Screenshot at repository root</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_screenshot_specifications"><a class="anchor" href="#_screenshot_specifications"></a>Screenshot Specifications</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The preview screenshot should:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Be named exactly <code>preview.png</code></p>
+</li>
+<li>
+<p>Be located in the repository root (main branch)</p>
+</li>
+<li>
+<p>Be 1280×720 pixels (16:9 aspect ratio)</p>
+</li>
+<li>
+<p>Show your theme&#8217;s main documentation page</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The gallery fetches your screenshot from:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">https://raw.githubusercontent.com/{owner}/{repo}/main/preview.png</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_demo_site_requirements"><a class="anchor" href="#_demo_site_requirements"></a>Demo Site Requirements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Your live demo should:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Be publicly accessible</p>
+</li>
+<li>
+<p>Show actual documentation content (not just "Hello World")</p>
+</li>
+<li>
+<p>Demonstrate key UI elements:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Navigation sidebar</p>
+</li>
+<li>
+<p>Table of contents</p>
+</li>
+<li>
+<p>Code blocks with syntax highlighting</p>
+</li>
+<li>
+<p>Tables</p>
+</li>
+<li>
+<p>Admonitions (NOTE, TIP, WARNING, etc.)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Use our <a href="template.html" class="xref page">template repository</a> which includes sample content showcasing all UI elements.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_optional_but_recommended"><a class="anchor" href="#_optional_but_recommended"></a>Optional but Recommended</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>README</strong> - Explain how to use and customize your theme</p>
+</li>
+<li>
+<p><strong>LICENSE</strong> - Specify how others can use your theme</p>
+</li>
+<li>
+<p><strong>Versioning</strong> - Use semantic versioning and git tags</p>
+</li>
+<li>
+<p><strong>Topics</strong> - Add <code>antora</code>, <code>antora-ui</code>, <code>documentation</code> topics to your repo</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/site-dark-mode.js"></script>
+  </body>
+</html>

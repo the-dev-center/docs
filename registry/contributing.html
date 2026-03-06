@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contributing your Extension :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/registry/contributing.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../_/css/site.css">
+<link rel="stylesheet" href="../_/css/site-extra.css">
+<script>
+(function () {
+  const themeKey = 'antora-theme';
+  const savedTheme = localStorage.getItem(themeKey);
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-theme');
+  }
+})();
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.devcentr.org">Dev-Centr Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="registry" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Antora Extensions Registry</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Welcome</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="contributing.html">Contributing</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora Extensions Registry</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../antora-dark-theme/0.1/guide/index.html">Antora Dark Theme</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../antora-dark-theme/0.1/guide/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Antora Extensions Registry</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../antora-themes-site/user/index.html">Antora Themes Gallery</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../DevCentr/index.html">DevCentr</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../msi-generator/index.html">MSI/MSIX Generator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../msi-generator/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../home/index.html">Project Portal</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../samples/1.0/index.html">Samples</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../samples/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../templates/index.html">Templates</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../templates/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Antora Extensions Registry</a></li>
+    <li><a href="contributing.html">Contributing</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/asciidoc-supplemental/antora-extensions-registry/edit/main/docs/modules/ROOT/pages/contributing.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Contributing your Extension</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>To list your extension in the Antora Extensions Registry, you should provide metadata files in your repository. This allows the registry to display rich information about your extension, including descriptions and screenshots.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_required_files"><a class="anchor" href="#_required_files"></a>Required Files</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>package.json</code>: Standard npm package file. The registry uses the <code>name</code>, <code>version</code>, and <code>description</code> fields.</p>
+</li>
+<li>
+<p><code>antora-registry.md</code>: A special Markdown file for registry-specific metadata.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_antora_registry_md_file"><a class="anchor" href="#_the_antora_registry_md_file"></a>The <code>antora-registry.md</code> File</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This file allows you to customize how your extension appears in the registry. It should be placed in the root of your repository.</p>
+</div>
+<div class="sect2">
+<h3 id="_frontmatter_fields"><a class="anchor" href="#_frontmatter_fields"></a>Frontmatter Fields</h3>
+<div class="paragraph">
+<p>The registry parses the YAML frontmatter for specific fields:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(Optional) Display name if different from <code>package.json</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>description</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A short, catchy summary for the extension card (limited to ~150 characters).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>screenshots</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A list of objects containing <code>url</code> and <code>caption</code>. These will be displayed in the screenshot carousel.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_content"><a class="anchor" href="#_content"></a>Content</h3>
+<div class="paragraph">
+<p>Everything below the frontmatter is used as the detailed description in the extension&#8217;s "Insights" panel. Standard Markdown is supported.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_template"><a class="anchor" href="#_template"></a>Template</h3>
+<div class="paragraph">
+<p>You can use the following template as a starting point. [<a href="https://github.com/antora-supplemental/antora-extensions-registry/blob/main/templates/antora-registry.md">Download Template</a>]</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-markdown hljs" data-lang="markdown">---
+name: "My Awesome Extension"
+description: "Briefly explain what your extension does and why it's great."
+screenshots:
+  - url: "https://raw.githubusercontent.com/user/repo/main/docs/assets/screenshot1.png"
+    caption: "Desktop View - Features highlighted"
+  - url: "https://raw.githubusercontent.com/user/repo/main/docs/assets/screenshot2.png"
+    caption: "Responsive Mobile Layout"
+---
+
+# Overview
+
+Add a detailed description of your extension here. You can use **Markdown** to format your content.
+This content will be displayed in the "Insights" panel of the Antora Extensions Registry.
+
+## Key Features
+- Feature 1
+- Feature 2
+- Feature 3</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_image_guidelines"><a class="anchor" href="#_image_guidelines"></a>Image Guidelines</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>External Hosting</strong>: We do <strong>not</strong> host your images. Please use stable URLs (e.g., GitHub <code>raw</code> links).</p>
+</li>
+<li>
+<p><strong>Aspect Ratio</strong>: We recommend a 16:9 aspect ratio for best display results.</p>
+</li>
+<li>
+<p><strong>Format</strong>: Standard web formats like PNG, JPG, or WebP are supported.</p>
+</li>
+<li>
+<p><strong>Count</strong>: You can provide up to 5 screenshots.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/site-dark-mode.js"></script>
+  </body>
+</html>

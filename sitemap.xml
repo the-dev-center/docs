@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap>
+<loc>https://docs.devcentr.org/sitemap-antora-dark-theme.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://docs.devcentr.org/sitemap-antora-themes-site.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://docs.devcentr.org/sitemap-DevCentr.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://docs.devcentr.org/sitemap-home.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://docs.devcentr.org/sitemap-msi-generator.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://docs.devcentr.org/sitemap-registry.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://docs.devcentr.org/sitemap-samples.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://docs.devcentr.org/sitemap-templates.xml</loc>
+</sitemap>
+</sitemapindex>

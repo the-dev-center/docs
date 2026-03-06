@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Extensions &amp; Integrations :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/antora-dark-theme/0.1/extensions.html">
+    <meta name="description" content="Exploring how common Asciidoctor extensions and third-party integrations render with the dark theme.">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/site-extra.css">
+<script>
+(function () {
+  const themeKey = 'antora-theme';
+  const savedTheme = localStorage.getItem(themeKey);
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-theme');
+  }
+})();
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.devcentr.org">Dev-Centr Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora-dark-theme" data-version="0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="guide/index.html">Antora Dark Theme</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guide/index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guide/installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guide/configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guide/customization.html">Customization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guide/how-it-works.html">How It Works</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guide/troubleshooting.html">Troubleshooting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Theme Demo</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Demo Home</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="typography.html">Typography</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="code-blocks.html">Code Blocks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="admonitions.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="tables.html">Tables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="blocks.html">Blocks &amp; Quotes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lists.html">Lists</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="images.html">Images &amp; Media</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="extensions.html">Extensions</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora Dark Theme</span>
+    <span class="version">0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="guide/index.html">Antora Dark Theme</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="guide/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../registry/index.html">Antora Extensions Registry</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../antora-themes-site/user/index.html">Antora Themes Gallery</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../DevCentr/index.html">DevCentr</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../msi-generator/index.html">MSI/MSIX Generator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../msi-generator/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../home/index.html">Project Portal</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../samples/1.0/index.html">Samples</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../samples/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../templates/index.html">Templates</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../templates/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="guide/index.html">Antora Dark Theme</a></li>
+    <li>Theme Demo</li>
+    <li><a href="extensions.html">Extensions</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/asciidoc-supplemental/antora-dark-theme/edit/main/docs/modules/ROOT/pages/extensions.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Extensions &amp; Integrations</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page explores various Asciidoctor extensions and third-party integrations.
+Some work seamlessly with the dark theme, others may need additional styling.
+Toggle between light and dark modes to see how each renders.</p>
+</div>
+<hr>
+<div class="openblock float-group">
+<div class="content">
+<div class="sidebarblock left">
+<div class="content">
+<div class="paragraph">
+<div class="title">Tabs Extension</div>
+<p>The <code>@asciidoctor/tabs</code> extension creates tabbed content blocks—perfect for showing alternatives like package managers or platform-specific instructions.</p>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">JavaScript</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const greeting = "Hello, dark mode!";
+console.log(greeting);</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Python</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">greeting = "Hello, dark mode!"
+print(greeting)</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Ruby</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ruby hljs" data-lang="ruby">greeting = "Hello, dark mode!"
+puts greeting</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="openblock float-group">
+<div class="content">
+<div class="sidebarblock right text-right">
+<div class="content">
+<div class="paragraph">
+<div class="title">STEM / Mathematical Notation</div>
+<p>AsciiDoc supports mathematical notation via MathJax or KaTeX.
+The formulas render as SVG or HTML, typically inheriting text color.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>When latexmath is enabled, you can write inline math like \(\sqrt{x^2 + y^2}\) or display equations:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[E = mc^2\]
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}\]
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Math rendering depends on your playbook&#8217;s STEM configuration.
+If formulas don&#8217;t appear, ensure <code>asciidoc.attributes.stem</code> is set.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<hr>
+<div class="openblock float-group">
+<div class="content">
+<div class="sidebarblock left">
+<div class="content">
+<div class="paragraph">
+<div class="title">Kroki Diagrams</div>
+<p>Kroki renders diagrams from text—Mermaid, PlantUML, D2, and dozens more.
+These generate SVGs that may need dark-mode-aware colors.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s a Mermaid flowchart (requires Kroki or native Mermaid integration):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-mermaid hljs" data-lang="mermaid">graph LR
+    A[Start] --&gt; B{Decision}
+    B --&gt;|Yes| C[Action 1]
+    B --&gt;|No| D[Action 2]
+    C --&gt; E[End]
+    D --&gt; E</code></pre>
+</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Diagram colors are defined in the diagram source, not CSS.
+For dark mode compatibility, use neutral colors or theme-aware palettes in your diagram definitions.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<hr>
+<div class="openblock float-group">
+<div class="content">
+<div class="sidebarblock right text-right">
+<div class="content">
+<div class="paragraph">
+<div class="title">PlantUML Sequence</div>
+<p>PlantUML excels at sequence diagrams, class diagrams, and more.
+The default colors are light-theme oriented.</p>
+</div>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-plantuml hljs" data-lang="plantuml">@startuml
+Alice -&gt; Bob: Authentication Request
+Bob --&gt; Alice: Authentication Response
+Alice -&gt; Bob: Another request
+Bob --&gt; Alice: Another response
+@enduml</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+PlantUML supports <code>skinparam</code> for theming.
+Use <code>skinparam backgroundColor transparent</code> and dark-friendly colors for better results.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_embedded_content"><a class="anchor" href="#_embedded_content"></a>Embedded Content</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Iframes and embedded widgets maintain their own styling—they don&#8217;t inherit from the parent page&#8217;s CSS.</p>
+</div>
+<div class="openblock float-group">
+<div class="content">
+<div class="sidebarblock left">
+<div class="content">
+<div class="paragraph">
+<div class="title">Video Embeds</div>
+<p>YouTube, Vimeo, and other video embeds work fine—the player chrome adapts to the video, not your site theme.</p>
+</div>
+</div>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe width="480" height="270" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="openblock float-group">
+<div class="content">
+<div class="sidebarblock right text-right">
+<div class="content">
+<div class="paragraph">
+<div class="title">Raw HTML Passthrough</div>
+<p>Passthrough blocks let you inject arbitrary HTML.
+Inline styles override the theme, so plan accordingly.</p>
+</div>
+</div>
+</div>
+<div style="padding: 1.5em; border-radius: 8px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+  <strong>Custom HTML Block</strong><br>
+  <small>This has hardcoded colors—it looks the same in both themes.</small>
+</div>
+</div>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_interactive_elements"><a class="anchor" href="#_interactive_elements"></a>Interactive Elements</h2>
+<div class="sectionbody">
+<div class="openblock float-group">
+<div class="content">
+<div class="sidebarblock left">
+<div class="content">
+<div class="paragraph">
+<div class="title">Keyboard Shortcuts</div>
+<p>The <code>kbd</code> macro renders keyboard shortcuts.
+These typically style well in dark mode.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Press <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd></span> to open the command palette.</p>
+</div>
+<div class="paragraph">
+<p>Use <span class="keyseq"><kbd>Cmd</kbd>+<kbd>K</kbd></span> then <span class="keyseq"><kbd>Cmd</kbd>+<kbd>S</kbd></span> to save all files.</p>
+</div>
+<div class="paragraph">
+<p>Common shortcuts: <kbd>Esc</kbd>, <kbd>Enter</kbd>, <kbd>Tab</kbd>, <kbd>Space</kbd></p>
+</div>
+</div>
+</div>
+<hr>
+<div class="openblock float-group">
+<div class="content">
+<div class="sidebarblock right text-right">
+<div class="content">
+<div class="paragraph">
+<div class="title">Menu &amp; Button UI Macros</div>
+<p>Menu selections and button references help document GUIs.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Select <span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Save As&#8230;&#8203;</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">PDF</b></span> to export.</p>
+</div>
+<div class="paragraph">
+<p>Click <b class="button">OK</b> to confirm or <b class="button">Cancel</b> to abort.</p>
+</div>
+<div class="paragraph">
+<p>Navigate to <span class="menuseq"><b class="menu">Settings</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Appearance</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Theme</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Dark</b></span>.</p>
+</div>
+</div>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_font_icons"><a class="anchor" href="#_font_icons"></a>Font Icons</h2>
+<div class="sectionbody">
+<div class="openblock float-group">
+<div class="content">
+<div class="sidebarblock left">
+<div class="content">
+<div class="paragraph">
+<div class="title">Font Awesome Icons</div>
+<p>When <code>:icons: font</code> is set, AsciiDoc renders icons via Font Awesome.
+These inherit text color automatically.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="icon red"><i class="fa fa-heart"></i></span> Love this theme</p>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-code"></i></span> Write some code</p>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-sun-o"></i></span> Light mode / <span class="icon"><i class="fa fa-moon-o"></i></span> Dark mode</p>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-github"></i></span> Check out the repo</p>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-warning"></i></span> Warnings stand out</p>
+</div>
+</div>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_custom_roles_styling"><a class="anchor" href="#_custom_roles_styling"></a>Custom Roles &amp; Styling</h2>
+<div class="sectionbody">
+<div class="openblock float-group">
+<div class="content">
+<div class="sidebarblock right text-right">
+<div class="content">
+<div class="paragraph">
+<div class="title">Text Roles</div>
+<p>Custom roles apply CSS classes.
+The dark theme styles common roles, but custom ones need your own CSS.</p>
+</div>
+</div>
+</div>
+<div class="paragraph lead">
+<p>Lead paragraphs introduce sections with emphasis.</p>
+</div>
+<div class="paragraph small">
+<p>Small text for footnotes or asides.</p>
+</div>
+<div class="paragraph big">
+<p>Big text for impact.</p>
+</div>
+<div class="paragraph underline">
+<p>Underlined for emphasis.</p>
+</div>
+<div class="paragraph line-through">
+<p>Struck through for deletions.</p>
+</div>
+</div>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_needs_extra_work"><a class="anchor" href="#_what_needs_extra_work"></a>What Needs Extra Work?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some extensions require additional dark mode CSS:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Extension</th>
+<th class="tableblock halign-left valign-top">Status</th>
+<th class="tableblock halign-left valign-top">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tabs (<code>@asciidoctor/tabs</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon green"><i class="fa fa-check"></i></span> Works</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inherits theme colors</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STEM / Math</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon green"><i class="fa fa-check"></i></span> Works</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SVG/HTML inherits text color</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kroki / Diagrams</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon yellow"><i class="fa fa-warning"></i></span> Partial</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Diagram colors are hardcoded in source</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Video embeds</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon green"><i class="fa fa-check"></i></span> Works</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Player has own chrome</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTML Passthrough</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon red"><i class="fa fa-times"></i></span> Manual</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inline styles override theme</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keyboard macros</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon green"><i class="fa fa-check"></i></span> Works</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Styled by theme</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Menu/Button macros</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon green"><i class="fa fa-check"></i></span> Works</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Styled by theme</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Font icons</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon green"><i class="fa fa-check"></i></span> Works</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inherits text color</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom roles</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon yellow"><i class="fa fa-warning"></i></span> Partial</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Standard roles styled; custom need CSS</p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_extending_for_your_content"><a class="anchor" href="#_extending_for_your_content"></a>Extending for Your Content</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To style custom elements in dark mode, add selectors to your CSS:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">/* Your custom component */
+html.dark-theme .my-custom-widget {
+  background-color: #25262b;
+  color: #c1c2c5;
+  border-color: #373a40;
+}
+
+/* Dark-mode-aware diagram wrapper */
+html.dark-theme .diagram-wrapper svg {
+  filter: invert(0.85) hue-rotate(180deg);
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The <code>filter: invert() hue-rotate()</code> trick can make light-themed diagrams readable in dark mode, though colors will shift.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/site-dark-mode.js"></script>
+  </body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Typography :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/antora-dark-theme/0.1/typography.html">
+    <meta name="description" content="Demonstrates headings, text formatting, and links in the dark theme.">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/site-extra.css">
+<script>
+(function () {
+  const themeKey = 'antora-theme';
+  const savedTheme = localStorage.getItem(themeKey);
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-theme');
+  }
+})();
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.devcentr.org">Dev-Centr Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora-dark-theme" data-version="0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="guide/index.html">Antora Dark Theme</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guide/index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guide/installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guide/configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guide/customization.html">Customization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guide/how-it-works.html">How It Works</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guide/troubleshooting.html">Troubleshooting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Theme Demo</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Demo Home</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="typography.html">Typography</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="code-blocks.html">Code Blocks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="admonitions.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="tables.html">Tables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="blocks.html">Blocks &amp; Quotes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lists.html">Lists</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="images.html">Images &amp; Media</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="extensions.html">Extensions</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora Dark Theme</span>
+    <span class="version">0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="guide/index.html">Antora Dark Theme</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="guide/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../registry/index.html">Antora Extensions Registry</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../antora-themes-site/user/index.html">Antora Themes Gallery</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../DevCentr/index.html">DevCentr</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../msi-generator/index.html">MSI/MSIX Generator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../msi-generator/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../home/index.html">Project Portal</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../samples/1.0/index.html">Samples</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../samples/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../templates/index.html">Templates</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../templates/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="guide/index.html">Antora Dark Theme</a></li>
+    <li>Theme Demo</li>
+    <li><a href="typography.html">Typography</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/asciidoc-supplemental/antora-dark-theme/edit/main/docs/modules/ROOT/pages/typography.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Typography</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page demonstrates typography elements and text styling.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_headings"><a class="anchor" href="#_headings"></a>Headings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Headings help organize content hierarchically.</p>
+</div>
+<div class="sect2">
+<h3 id="_level_3_heading"><a class="anchor" href="#_level_3_heading"></a>Level 3 Heading</h3>
+<div class="paragraph">
+<p>Content under a level 3 heading.</p>
+</div>
+<div class="sect3">
+<h4 id="_level_4_heading"><a class="anchor" href="#_level_4_heading"></a>Level 4 Heading</h4>
+<div class="paragraph">
+<p>Content under a level 4 heading.</p>
+</div>
+<div class="sect4">
+<h5 id="_level_5_heading"><a class="anchor" href="#_level_5_heading"></a>Level 5 Heading</h5>
+<div class="paragraph">
+<p>Content under a level 5 heading.</p>
+</div>
+<div class="sect5">
+<h6 id="_level_6_heading"><a class="anchor" href="#_level_6_heading"></a>Level 6 Heading</h6>
+<div class="paragraph">
+<p>Content under a level 6 heading.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_inline_formatting"><a class="anchor" href="#_inline_formatting"></a>Inline Formatting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Text can be formatted in various ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Bold text</strong> for emphasis</p>
+</li>
+<li>
+<p><em>Italic text</em> for subtle emphasis</p>
+</li>
+<li>
+<p><code>Monospace text</code> for inline code</p>
+</li>
+<li>
+<p><strong><em>Bold and italic</em></strong> combined</p>
+</li>
+<li>
+<p><sup>Superscript</sup> and <sub>subscript</sub> text</p>
+</li>
+<li>
+<p><mark>Highlighted</mark> text using the mark role</p>
+</li>
+<li>
+<p><span class="underline">Underlined text</span></p>
+</li>
+<li>
+<p><span class="line-through">Strikethrough text</span></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links"><a class="anchor" href="#_links"></a>Links</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_external_links"><a class="anchor" href="#_external_links"></a>External Links</h3>
+<div class="paragraph">
+<p>Visit the <a href="https://antora.org">Antora website</a> for more information.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s a link to <a href="https://github.com/antora-supplemental/antora-dark-theme">this project on GitHub</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_internal_cross_references"><a class="anchor" href="#_internal_cross_references"></a>Internal Cross-References</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Go to the <a href="index.html" class="xref page">Home page</a></p>
+</li>
+<li>
+<p>Check out <a href="code-blocks.html" class="xref page">Code Blocks</a></p>
+</li>
+<li>
+<p>See <a href="admonitions.html" class="xref page">Admonitions</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_paragraphs"><a class="anchor" href="#_paragraphs"></a>Paragraphs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is a regular paragraph.
+Paragraphs are separated by blank lines.
+Text within a paragraph wraps naturally.</p>
+</div>
+<div class="paragraph">
+<p>This is another paragraph demonstrating the spacing between paragraphs.
+The dark theme ensures comfortable reading with appropriate contrast ratios.</p>
+</div>
+<div class="paragraph lead">
+<p>This is a lead paragraph, typically used for introductory text.
+It appears slightly larger and more prominent.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_horizontal_rules"><a class="anchor" href="#_horizontal_rules"></a>Horizontal Rules</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Content above the rule.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>Content below the rule.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_keyboard_shortcuts"><a class="anchor" href="#_keyboard_shortcuts"></a>Keyboard Shortcuts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Press kbd:[Ctrl+C] to copy and kbd:[Ctrl+V] to paste.</p>
+</div>
+<div class="paragraph">
+<p>On macOS, use kbd:[Cmd+C] and kbd:[Cmd+V] instead.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_menu_and_button_ui"><a class="anchor" href="#_menu_and_button_ui"></a>Menu and Button UI</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Navigate to menu:File[Save As&#8230;&#8203;] to save the document.</p>
+</div>
+<div class="paragraph">
+<p>Click the btn:[Submit] button to continue.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_footnotes"><a class="anchor" href="#_footnotes"></a>Footnotes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This text has a footnote.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p>Another footnote reference.<sup class="footnote" id="_footnote_note2">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup></p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. This is the footnote content.
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. Second footnote with a reference ID.
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/site-dark-mode.js"></script>
+  </body>
+</html>

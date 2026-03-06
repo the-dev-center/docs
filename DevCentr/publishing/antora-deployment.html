@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Antora Deployment Strategies: Root vs. Docs :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/DevCentr/publishing/antora-deployment.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/site-extra.css">
+<script>
+(function () {
+  const themeKey = 'antora-theme';
+  const savedTheme = localStorage.getItem(themeKey);
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-theme');
+  }
+})();
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.devcentr.org">Dev-Centr Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="DevCentr" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">DevCentr</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Dev Center</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../project-vision.html">Project Vision</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/index.html">Knowledge Base</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../specifications/index.html">Specifications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Software Publishing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/index.html">Knowledge Base</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">🎓 Tutorials</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/tutorials/onboarding.html">Developer Onboarding</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">🛠️ How-to Guides</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/how-to/index.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/how-to/flutter-setup.html">Flutter Setup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/how-to/tailwind-setup.html">Tailwind Setup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/how-to/file-sync.html">File Sync</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/how-to/git-ignore-local.html">.gitignore.local</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/how-to/git-hooks.html">Git Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/how-to/git-lfs.html">Large Files &amp; LFS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/how-to/git-recovery.html">Git Recovery</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/how-to/kvm-windows-automation.html">Windows Automation via KVM</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">📚 Reference</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/reference/index.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/reference/workspace-organization.html">Workspace Organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/reference/recommended-tools.html">Recommended Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/reference/git-management.html">Git Management</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/reference/git-installation.html">Git Installation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/reference/nodejs-env.html">Node.js Environment</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/reference/asciidoc-tools.html">AsciiDoc Tooling</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">🧠 Explanation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../knowledge-base/explanation/index.html">Overview</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Architecture</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../knowledge-base/explanation/architecture/principles.html">Core Principles</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../knowledge-base/explanation/architecture/google-docs-apps-script.html">Apps Script Optimization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Infrastructure</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../knowledge-base/explanation/infrastructure/ssh-keys.html">SSH Keys</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../knowledge-base/explanation/infrastructure/git-branching.html">Branching Strategies</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../knowledge-base/explanation/infrastructure/git-submodules.html">Submodules &amp; Monorepos</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../knowledge-base/explanation/infrastructure/pnpm-mechanics.html">pnpm Mechanics</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../knowledge-base/explanation/infrastructure/self-hosting.html">Self-Hosting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../knowledge-base/explanation/infrastructure/windows-testing-on-linux.html">Windows Testing on Linux</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../knowledge-base/explanation/infrastructure/sync-by-gemini.html">Sync: Gemini</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../knowledge-base/explanation/infrastructure/sync-grok4.html">Sync: Grok4</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../specifications/index.html">Specifications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../specifications/components/dependency-modeler.html">Dependency Modeler</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../specifications/components/project-recognizer.html">Project Recognizer</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../specifications/components/repository-provider-registry.html">Repository Provider Registry</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../specifications/components/text-editor-link-system.html">Text Editor Link System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../specifications/components/code-execution-recording.html">Code Execution Recording</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../specifications/components/git-repository-manager.html">Git Repository Manager</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../specifications/components/workspace-template-manager.html">Workspace Template Manager</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../specifications/features/opening-web-content-from-docs.html">Opening Web Content from Docs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../specifications/features/text-editor-separate-process.html">Text Editor Separate Process</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Software Publishing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="git-release-workflow.html">Git Release Workflow</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="automated-releases.html">Automated Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="package-registries.html">Package Registries</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="antora-deployment.html">Antora Deployment</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">DevCentr</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../antora-dark-theme/0.1/guide/index.html">Antora Dark Theme</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../antora-dark-theme/0.1/guide/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../registry/index.html">Antora Extensions Registry</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../antora-themes-site/user/index.html">Antora Themes Gallery</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">DevCentr</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../msi-generator/index.html">MSI/MSIX Generator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../msi-generator/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../home/index.html">Project Portal</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../samples/1.0/index.html">Samples</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../samples/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../templates/index.html">Templates</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../templates/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">DevCentr</a></li>
+    <li>Software Publishing</li>
+    <li><a href="antora-deployment.html">Antora Deployment</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/dev-centr/devcentr/edit/main/docs/modules/publishing/pages/antora-deployment.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Antora Deployment Strategies: Root vs. Docs</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>When documenting a single repository, there are two common ways to structure your Antora project: the <strong>Root Strategy</strong> and the <strong>Subfolder Strategy</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Both work, but they have different trade-offs for local development and CI/CD.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_the_root_strategy_recommended"><a class="anchor" href="#_1_the_root_strategy_recommended"></a>1. The Root Strategy (Recommended)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this setup, the <code>antora-playbook.yml</code> lives at the <strong>repository root</strong>, even if the content is in <code>docs/</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Structure</strong>:
+<code><code>text
+my-repo/
+├── antora-playbook.yml  &#8592;- Root
+├── .github/workflows/docs.yml
+└── docs/
+    └── antora.yml
+</code></code></p>
+</li>
+<li>
+<p><strong>Playbook Config</strong>:
+```yaml
+content:
+  sources:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>url: .            # Points to the root (current dir)
+      start_path: docs  # Tells Antora to look inside docs/
+<code>`</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Pros</strong>:</p>
+</li>
+<li>
+<p><strong>CI Simplicity</strong>: In GitHub Actions, the checkout root is <code>.</code> . The command <code>antora antora-playbook.yml</code> just works. No path overrides needed.</p>
+</li>
+<li>
+<p><strong>Clarity</strong>: The playbook clearly defines the site for the <strong>entire repo</strong>.</p>
+</li>
+<li>
+<p><strong>Cons</strong>:</p>
+</li>
+<li>
+<p>Adds one file to your root directory.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_the_subfolder_strategy_legacy"><a class="anchor" href="#_2_the_subfolder_strategy_legacy"></a>2. The Subfolder Strategy (Legacy)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this setup, everything lives inside <code>docs/</code>, including the playbook.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Structure</strong>:
+<code><code>text
+my-repo/
+└── docs/
+    ├── antora-playbook.yml  &#8592;- Inside docs/
+    └── antora.yml
+</code></code></p>
+</li>
+<li>
+<p><strong>Playbook Config</strong>:
+```yaml
+content:
+  sources:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>url: ..           # MUST point to parent (git root)
+      start_path: docs
+<code>`</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Pros</strong>:</p>
+</li>
+<li>
+<p>Keeps the repository root clean.</p>
+</li>
+<li>
+<p><strong>Cons</strong>:</p>
+</li>
+<li>
+<p><strong>CI Complexity</strong>: When running in CI, you are usually at the repo root.
+Running <code>antora docs/antora-playbook.yml</code> causes relative path resolution specific to where the command is <strong>run</strong> vs where the file <strong>is</strong>.</p>
+</li>
+<li>
+<p>If <code>url: .</code>, Antora thinks the git root is <code>docs/</code> (Wrong).</p>
+</li>
+<li>
+<p>If <code>url: ..</code>, Antora tries to resolve the parent of the checkout (Restricted).</p>
+</li>
+<li>
+<p><strong>Fix</strong>: You often have to force correct paths with <code>--url .</code> CLI flags.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_recommendation"><a class="anchor" href="#_recommendation"></a>Recommendation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Use the Root Strategy.</strong></p>
+</div>
+<div class="paragraph">
+<p>It aligns with how CI systems view your repository (as a unit). The slight "clutter" of one file at the root is worth the stability in deployment pipelines.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_multi_repository_handling"><a class="anchor" href="#_multi_repository_handling"></a>Multi-Repository Handling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Your question is: <strong>Does this hold up when referencing other git repositories?</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Yes, and it actually makes local development easier.</strong></p>
+</div>
+<div class="paragraph">
+<p>In a multi-repo site (like the main Dev Center), you have two distinct needs:</p>
+</div>
+<div class="sect2">
+<h3 id="_1_the_productionci_need_remote_urls"><a class="anchor" href="#_1_the_productionci_need_remote_urls"></a>1. The Production/CI Need (Remote URLs)</h3>
+<div class="paragraph">
+<p>In your main production playbook (e.g., <code>dev-centr/docs/antora-playbook.yml</code>), you should use <strong>Full GitHub URLs</strong>. This is the only way for GitHub Actions to fetch all the pieces.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">content:
+  sources:
+    - url: https://github.com/dev-centr/msi-installer-generator.git
+      branches: HEAD
+      start_path: docs</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_the_local_development_need_relative_paths"><a class="anchor" href="#_2_the_local_development_need_relative_paths"></a>2. The Local Development Need (Relative Paths)</h3>
+<div class="paragraph">
+<p>When working locally, cloning is slow. You want to point to your sibling folders on your hard drive.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Root Strategy</strong>: Siblings are at <code>../sibling-repo</code>.</p>
+</li>
+<li>
+<p><strong>Subfolder Strategy</strong>: Siblings are at <code>../../sibling-repo</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>By using the <strong>Root Strategy</strong>, your local dev references are cleaner and match the standard "folder per project" structure of most developers.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_best_of_both_worlds_solution"><a class="anchor" href="#_the_best_of_both_worlds_solution"></a>The "Best of Both Worlds" Solution</h3>
+<div class="paragraph">
+<p>Do not manually toggle URLs in your main playbook. Instead, use a <strong>Local Dev Playbook Extension</strong>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create <code>local-antora-playbook.yml</code> (and Git-ignore it).</p>
+</li>
+<li>
+<p>Define only the local overrides:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">extends: ./antora-playbook.yml
+content:
+  sources:
+    - url: ../msi-generator
+      branches: HEAD
+      start_path: docs</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Run locally with: <code>antora local-antora-playbook.yml</code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This keeps your <strong>Root Strategy</strong> intact for the repo&#8217;s specific CI, while allowing the global "hub" site to aggregate everything seamlessly.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_github_pages_configuration"><a class="anchor" href="#_github_pages_configuration"></a>GitHub Pages Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Regardless of strategy, deployment is the same:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Build</strong>: Antora generates a static site (default: <code>build/site</code> or <code>public/</code>).</p>
+</li>
+<li>
+<p><strong>Upload</strong>: Upload this folder to the <code>gh-pages</code> branch.</p>
+</li>
+<li>
+<p><strong>Configure</strong>: Set GitHub Pages to deploy from <code>gh-pages</code> / <code>root</code>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/site-dark-mode.js"></script>
+  </body>
+</html>

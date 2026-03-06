@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Documentation Preview System :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/templates/product/documentation-preview.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/site-extra.css">
+<script>
+(function () {
+  const themeKey = 'antora-theme';
+  const savedTheme = localStorage.getItem(themeKey);
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-theme');
+  }
+})();
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.devcentr.org">Dev-Centr Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="templates" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Templates</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../architecture/overview.html">Architecture Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Architecture</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../architecture/overview.html">Core Pattern</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environment-setup.html">Environment Setup</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="documentation-preview.html">Doc Preview System</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="vcs-configuration.html">VCS &amp; Repos</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../committing.html">Committing Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../vscode-workspace.html">VSCode Workspace</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../guides/ssh-keys-setup.html">SSH keys setup (Windows)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../guides/corepack-installation-helper.html">Corepack installation helper</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../guides/tool-hierarchy.html">Tool hierarchy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../guides/why-use-corepack.html">Why use Corepack</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../guides/issues-repository.html">Issues Repository Pattern</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../terminology.html">Terminology</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../dev/components.html">Dev: Components</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../dev/getting-started.html">Dev: Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../dev/development-tools.html">Dev: Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../dev/educational-resources.html">Dev: Educational Resources</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Templates</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../antora-dark-theme/0.1/guide/index.html">Antora Dark Theme</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../antora-dark-theme/0.1/guide/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../registry/index.html">Antora Extensions Registry</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../antora-themes-site/user/index.html">Antora Themes Gallery</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../DevCentr/index.html">DevCentr</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../msi-generator/index.html">MSI/MSIX Generator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../msi-generator/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../home/index.html">Project Portal</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../samples/1.0/index.html">Samples</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../samples/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Templates</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Templates</a></li>
+    <li>Features</li>
+    <li><a href="documentation-preview.html">Doc Preview System</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/dev-centr/templates/edit/main/docs/modules/ROOT/pages/product/documentation-preview.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Documentation Preview System</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Dev Center includes a performant, monitor-aware documentation viewing system that eliminates the context switch to a full web browser.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docminimap_zoomed_out_preview"><a class="anchor" href="#_docminimap_zoomed_out_preview"></a>DocMinimap (Zoomed-Out Preview)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>DocMinimap</strong> provides a real-time, one-way synchronized preview of project documentation.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Contextual Sync</strong>: As you interact with different modules (e.g., Environment Setup), the minimap automatically scrolls to the relevant technical documentation section.</p>
+</li>
+<li>
+<p><strong>Non-Persistent Sync</strong>: After the initial scroll transition, the user retains full manual control over the preview position.</p>
+</li>
+<li>
+<p><strong>Direct Access</strong>: Clicking anywhere in the minimap opens the full-zoom documentation window.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_advanced_window_management"><a class="anchor" href="#_advanced_window_management"></a>Advanced Window Management</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_full_zoom_webviews"><a class="anchor" href="#_full_zoom_webviews"></a>Full-Zoom Webviews</h3>
+<div class="paragraph">
+<p>The app spawns dedicated documentation windows (using webview integration) for each module.
+* <strong>Return Flow</strong>: Title bars include a return button to quickly focus back on the main app.
+* <strong>External Link</strong>: Subtle icons allow you to jump to a full web browser for the current page if needed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dynamic_zoom_controls"><a class="anchor" href="#_dynamic_zoom_controls"></a>Dynamic Zoom Controls</h3>
+<div class="paragraph">
+<p>A floating overlay appears at the top center of your monitor to manage window sizes:
+1. <strong>Panel Mode</strong>: Repositions to the side of the main app (640px base).
+2. <strong>Wide Mode</strong>: 2x base width.
+3. <strong>Extra-Wide Mode</strong>: 3x base width.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_monitor_anchoring"><a class="anchor" href="#_monitor_anchoring"></a>Monitor Anchoring</h3>
+<div class="paragraph">
+<p>Users can drag and drop documentation windows between monitors using a "Monitor Overlay Canvas" system, allowing for flexible multitasking without losing document context.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/site-dark-mode.js"></script>
+  </body>
+</html>

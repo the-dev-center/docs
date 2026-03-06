@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Text Editor Link System - GUI Library Selection and Implementation Plan :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/DevCentr/specifications/components/text-editor-link-system.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="../../../_/css/site-extra.css">
+<script>
+(function () {
+  const themeKey = 'antora-theme';
+  const savedTheme = localStorage.getItem(themeKey);
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-theme');
+  }
+})();
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.devcentr.org">Dev-Centr Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="DevCentr" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../index.html">DevCentr</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../index.html">Dev Center</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../project-vision.html">Project Vision</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/index.html">Knowledge Base</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Specifications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../publishing/index.html">Software Publishing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/index.html">Knowledge Base</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">🎓 Tutorials</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/tutorials/onboarding.html">Developer Onboarding</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">🛠️ How-to Guides</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/how-to/index.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/how-to/flutter-setup.html">Flutter Setup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/how-to/tailwind-setup.html">Tailwind Setup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/how-to/file-sync.html">File Sync</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/how-to/git-ignore-local.html">.gitignore.local</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/how-to/git-hooks.html">Git Hooks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/how-to/git-lfs.html">Large Files &amp; LFS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/how-to/git-recovery.html">Git Recovery</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/how-to/kvm-windows-automation.html">Windows Automation via KVM</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">📚 Reference</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/reference/index.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/reference/workspace-organization.html">Workspace Organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/reference/recommended-tools.html">Recommended Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/reference/git-management.html">Git Management</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/reference/git-installation.html">Git Installation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/reference/nodejs-env.html">Node.js Environment</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../knowledge-base/reference/asciidoc-tools.html">AsciiDoc Tooling</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">🧠 Explanation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../knowledge-base/explanation/index.html">Overview</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Architecture</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../knowledge-base/explanation/architecture/principles.html">Core Principles</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../knowledge-base/explanation/architecture/google-docs-apps-script.html">Apps Script Optimization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Infrastructure</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../knowledge-base/explanation/infrastructure/ssh-keys.html">SSH Keys</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../knowledge-base/explanation/infrastructure/git-branching.html">Branching Strategies</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../knowledge-base/explanation/infrastructure/git-submodules.html">Submodules &amp; Monorepos</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../knowledge-base/explanation/infrastructure/pnpm-mechanics.html">pnpm Mechanics</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../knowledge-base/explanation/infrastructure/self-hosting.html">Self-Hosting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../knowledge-base/explanation/infrastructure/windows-testing-on-linux.html">Windows Testing on Linux</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../knowledge-base/explanation/infrastructure/sync-by-gemini.html">Sync: Gemini</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../knowledge-base/explanation/infrastructure/sync-grok4.html">Sync: Grok4</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Specifications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="dependency-modeler.html">Dependency Modeler</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="project-recognizer.html">Project Recognizer</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="repository-provider-registry.html">Repository Provider Registry</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="text-editor-link-system.html">Text Editor Link System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="code-execution-recording.html">Code Execution Recording</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="git-repository-manager.html">Git Repository Manager</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="workspace-template-manager.html">Workspace Template Manager</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/opening-web-content-from-docs.html">Opening Web Content from Docs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/text-editor-separate-process.html">Text Editor Separate Process</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Software Publishing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../publishing/index.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../publishing/git-release-workflow.html">Git Release Workflow</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../publishing/automated-releases.html">Automated Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../publishing/package-registries.html">Package Registries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../publishing/antora-deployment.html">Antora Deployment</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">DevCentr</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../../antora-dark-theme/0.1/guide/index.html">Antora Dark Theme</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../antora-dark-theme/0.1/guide/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../registry/index.html">Antora Extensions Registry</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../antora-themes-site/user/index.html">Antora Themes Gallery</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../../index.html">DevCentr</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../msi-generator/index.html">MSI/MSIX Generator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../msi-generator/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../home/index.html">Project Portal</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../samples/1.0/index.html">Samples</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../samples/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../templates/index.html">Templates</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../templates/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">DevCentr</a></li>
+    <li><a href="text-editor-link-system.html">Text Editor Link System</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/dev-centr/devcentr/edit/main/docs/modules/specifications/pages/components/text-editor-link-system.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Text Editor Link System - GUI Library Selection and Implementation Plan</h1>
+<div class="sect1">
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document outlines the selection of a D GUI library for implementing the text editor as separate process design, and provides a roadmap for implementation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gui_library_selection_dlangui"><a class="anchor" href="#_gui_library_selection_dlangui"></a>GUI Library Selection: dlangui</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_why_dlangui"><a class="anchor" href="#_why_dlangui"></a>Why dlangui?</h3>
+<div class="paragraph">
+<p>After evaluating several D GUI libraries (GtkD, DUI, bindbc-sdl, dfltk), we selected <strong>dlangui</strong> for the following reasons:</p>
+</div>
+<div class="sect3">
+<h4 id="_native_d_implementation"><a class="anchor" href="#_native_d_implementation"></a>Native D Implementation</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>dlangui is written entirely in D, making it significantly easier to modify and extend</p>
+</li>
+<li>
+<p>No C/C++ bindings to work around when adding custom features</p>
+</li>
+<li>
+<p>Direct access to the rendering pipeline for implementing visual link rendering</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_cross_platform_support"><a class="anchor" href="#_cross_platform_support"></a>Cross-Platform Support</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Supports Windows, Linux, macOS, and Android</p>
+</li>
+<li>
+<p>Uses OpenGL for hardware acceleration with fallback to native APIs</p>
+</li>
+<li>
+<p>Aligns with our Windows 11 development environment</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_widget_based_architecture"><a class="anchor" href="#_widget_based_architecture"></a>Widget-Based Architecture</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Retained mode GUI paradigm (widgets maintain state)</p>
+</li>
+<li>
+<p>Android-inspired API (layouts, styles, two-phase layout)</p>
+</li>
+<li>
+<p>Highly customizable themes and styles</p>
+</li>
+<li>
+<p>Well-suited for building complex UIs like our project manager interface</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_active_development"><a class="anchor" href="#_active_development"></a>Active Development</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Maintained by the D community</p>
+</li>
+<li>
+<p>Good documentation and examples</p>
+</li>
+<li>
+<p>Multiple example applications demonstrating various features</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_custom_rendering_capabilities"><a class="anchor" href="#_custom_rendering_capabilities"></a>Custom Rendering Capabilities</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>OpenGL-based rendering allows for custom drawing operations</p>
+</li>
+<li>
+<p>Can draw lines and shapes across windows (needed for visual links)</p>
+</li>
+<li>
+<p>Flexible enough to support our novel link rendering requirements</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_library_location"><a class="anchor" href="#_library_location"></a>Library Location</h3>
+<div class="paragraph">
+<p>The dlangui library has been cloned to:
+<code>Z:\code\dev-centr\dlangui</code></p>
+</div>
+<div class="paragraph">
+<p>This is a separate project folder that has been added to the workspace for easy access during development.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_implementation_plan"><a class="anchor" href="#_implementation_plan"></a>Implementation Plan</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_phase_1_foundation_current"><a class="anchor" href="#_phase_1_foundation_current"></a>Phase 1: Foundation (Current)</h3>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> Select GUI library</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Clone dlangui repository</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Add to workspace</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Document selection rationale</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_phase_2_proof_of_concept_current"><a class="anchor" href="#_phase_2_proof_of_concept_current"></a>Phase 2: Proof of Concept (Current)</h3>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> Create standalone POC project: <code>src/projects/text-editor-link-system-poc/</code></p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Set up dub.json with dlangui dependency</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Create basic project structure</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Implement basic IPC mechanism (named pipes or sockets)</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Create process spawning utilities for editor windows</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Basic window management (create/destroy editor windows)</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Implement file card widget</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Implement visual link rendering</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_phase_3_visual_link_system_dlangui_modifications"><a class="anchor" href="#_phase_3_visual_link_system_dlangui_modifications"></a>Phase 3: Visual Link System (dlangui modifications)</h3>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> Fork dlangui modifications into a branch</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Add link anchor widget/component to dlangui</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Implement cross-window line rendering</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Add link connection tracking system</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Implement link anchor positioning and tracking</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_phase_4_module_refactoring"><a class="anchor" href="#_phase_4_module_refactoring"></a>Phase 4: Module Refactoring</h3>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> Refactor working POC code into module structure: <code>src/modules/text-editor-link-system/</code></p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Extract reusable components</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Set up proper module dependencies</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_phase_5_window_management"><a class="anchor" href="#_phase_5_window_management"></a>Phase 5: Window Management</h3>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> Implement tessellation algorithm for grid arrangement</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Implement stacking algorithm with offset positioning</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Monitor boundary detection and snapping</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Window clustering calculation</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Auto-arrangement based on window positions</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_phase_6_sample_application"><a class="anchor" href="#_phase_6_sample_application"></a>Phase 6: Sample Application</h3>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> Create main window with file card UI</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Implement file card component (showing filename)</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Add link anchor space under filename in card</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Double-click handler to spawn editor window</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Editor window with title bar showing filename</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Link node behind editor window, attached below title bar</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Real-time link rendering between card and editor</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_phase_7_integration"><a class="anchor" href="#_phase_7_integration"></a>Phase 7: Integration</h3>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> IPC for file content synchronization</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Editor process file loading/saving</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Parent process view updates based on editor changes</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Error handling and process lifecycle management</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_technical_considerations"><a class="anchor" href="#_technical_considerations"></a>Technical Considerations</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_inter_process_communication"><a class="anchor" href="#_inter_process_communication"></a>Inter-Process Communication</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Option 1: Named Pipes</strong> - Simple, Windows-native, good for local IPC</p>
+</li>
+<li>
+<p><strong>Option 2: Sockets</strong> - More flexible, cross-platform, allows remote connections later</p>
+</li>
+<li>
+<p><strong>Option 3: Shared Memory</strong> - Fastest, but more complex synchronization</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Recommendation:</strong> Start with named pipes for Windows, can extend to sockets later for cross-platform support.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_visual_link_rendering"><a class="anchor" href="#_visual_link_rendering"></a>Visual Link Rendering</h3>
+<div class="paragraph">
+<p>The visual links need to be drawn across window boundaries. Options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Overlay Window:</strong> Create a transparent overlay window that draws lines between windows</p>
+</li>
+<li>
+<p><strong>Parent Window Drawing:</strong> Parent window draws lines to child windows (requires child window position tracking)</p>
+</li>
+<li>
+<p><strong>Modified GUI Library:</strong> Extend dlangui&#8217;s rendering system to support cross-window drawing</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Recommendation:</strong> Modify dlangui to support cross-window link rendering as a first-class feature.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_window_positioning_algorithms"><a class="anchor" href="#_window_positioning_algorithms"></a>Window Positioning Algorithms</h3>
+<div class="sect3">
+<h4 id="_tessellation"><a class="anchor" href="#_tessellation"></a>Tessellation</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Divide screen space into grid cells</p>
+</li>
+<li>
+<p>Place windows in predetermined grid positions</p>
+</li>
+<li>
+<p>Resize windows to fit grid cells</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_stacking_with_offset"><a class="anchor" href="#_stacking_with_offset"></a>Stacking with Offset</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Calculate average position of largest window cluster</p>
+</li>
+<li>
+<p>Place new window offset down and to the right</p>
+</li>
+<li>
+<p>Snap to monitor boundaries if average is off-screen</p>
+</li>
+<li>
+<p>Overlap windows with visual offset</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Recommendation:</strong> Implement both algorithms, allow user preference or auto-select based on window count.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_module_structure"><a class="anchor" href="#_module_structure"></a>Module Structure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The text editor link system will be organized as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>src/modules/text-editor-link-system/
+├── ipc/
+│   ├── pipe.d          # Named pipe IPC implementation
+│   └── protocol.d      # IPC message protocol
+├── windows/
+│   ├── manager.d       # Window lifecycle management
+│   ├── positioning.d   # Window positioning algorithms
+│   └── monitor.d       # Monitor detection and boundaries
+├── links/
+│   ├── renderer.d      # Visual link rendering
+│   ├── anchor.d        # Link anchor widget/component
+│   └── connection.d    # Link connection tracking
+├── editor/
+│   ├── process.d       # Editor process spawning
+│   └── window.d        # Editor window implementation
+└── sample/
+    ├── main.d          # Sample application entry point
+    ├── file_card.d     # File card widget
+    └── app.d           # Main application logic</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_next_steps"><a class="anchor" href="#_next_steps"></a>Next Steps</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Set up dub project configuration</p>
+</li>
+<li>
+<p>Create module directory structure</p>
+</li>
+<li>
+<p>Implement basic IPC mechanism</p>
+</li>
+<li>
+<p>Create minimal proof-of-concept with one editor window</p>
+</li>
+<li>
+<p>Begin dlangui modifications for link rendering</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references"><a class="anchor" href="#_references"></a>References</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>dlangui GitHub: <a href="https://github.com/buggins/dlangui" class="bare">https://github.com/buggins/dlangui</a></p>
+</li>
+<li>
+<p>dlangui Documentation: <a href="http://buggins.github.io/dlangui/ddox" class="bare">http://buggins.github.io/dlangui/ddox</a></p>
+</li>
+<li>
+<p>dlangui Getting Started: <a href="https://github.com/buggins/dlangui/wiki/Getting-Started" class="bare">https://github.com/buggins/dlangui/wiki/Getting-Started</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/site-dark-mode.js"></script>
+  </body>
+</html>

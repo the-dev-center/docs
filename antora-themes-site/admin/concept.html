@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Design Decisions :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/antora-themes-site/admin/concept.html">
+    <meta name="description" content="Why the gallery uses decentralized previews">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/site-extra.css">
+<script>
+(function () {
+  const themeKey = 'antora-theme';
+  const savedTheme = localStorage.getItem(themeKey);
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-theme');
+  }
+})();
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.devcentr.org">Dev-Centr Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora-themes-site" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../user/index.html">Antora Themes Gallery</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Theme Developers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../user/index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../user/requirements.html">Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../user/template.html">Using the Template</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../user/github-action.html">GitHub Action Setup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../user/submitting.html">Submitting Your Theme</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Administrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Overview</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="concept.html">Design Decisions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="architecture.html">Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Deployment</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="setup.html">Setup Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environment.html">Environment Variables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="authentication.html">Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="database.html">Database Schema</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora Themes Gallery</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../antora-dark-theme/0.1/guide/index.html">Antora Dark Theme</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../antora-dark-theme/0.1/guide/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../registry/index.html">Antora Extensions Registry</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../user/index.html">Antora Themes Gallery</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../DevCentr/index.html">DevCentr</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../msi-generator/index.html">MSI/MSIX Generator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../msi-generator/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../home/index.html">Project Portal</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../samples/1.0/index.html">Samples</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../samples/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../templates/index.html">Templates</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../templates/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../user/index.html">Antora Themes Gallery</a></li>
+    <li>For Administrators</li>
+    <li><a href="concept.html">Design Decisions</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/asciidoc-supplemental/antora-themes-site/edit/main/docs/modules/admin/pages/concept.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Design Decisions</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page documents the architectural decisions that shaped the Antora Themes Gallery.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_problem"><a class="anchor" href="#_the_problem"></a>The Problem</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We wanted to create a site that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Indexes Antora themes from the community</p>
+</li>
+<li>
+<p>Shows live previews of each theme</p>
+</li>
+<li>
+<p>Lets theme developers submit their work easily</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_approach_1_centralized_builds_rejected"><a class="anchor" href="#_approach_1_centralized_builds_rejected"></a>Approach 1: Centralized Builds (Rejected)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The initial design considered building theme previews on our servers:</p>
+</div>
+<div class="sect2">
+<h3 id="_how_it_would_work"><a class="anchor" href="#_how_it_would_work"></a>How It Would Work</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Developer submits repository URL</p>
+</li>
+<li>
+<p>Our server clones the repo</p>
+</li>
+<li>
+<p>Runs <code>gulp bundle</code> to build the UI</p>
+</li>
+<li>
+<p>Runs Antora with sample content</p>
+</li>
+<li>
+<p>Hosts the result</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_why_we_rejected_it"><a class="anchor" href="#_why_we_rejected_it"></a>Why We Rejected It</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Issue</th>
+<th class="tableblock halign-left valign-top">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Security Risk</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Running untrusted Handlebars templates and build scripts = potential RCE</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Compute Costs</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Every theme submission triggers a build job</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintenance Burden</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Need to maintain Docker workers, job queues, etc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Inconsistency</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Different Node versions, build failures, etc.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_approach_2_decentralized_previews_adopted"><a class="anchor" href="#_approach_2_decentralized_previews_adopted"></a>Approach 2: Decentralized Previews (Adopted)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Instead, we offload builds to the developer&#8217;s repository:</p>
+</div>
+<div class="sect2">
+<h3 id="_how_it_works"><a class="anchor" href="#_how_it_works"></a>How It Works</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Developer sets up GitHub Actions in their repo</p>
+</li>
+<li>
+<p>Action builds theme and deploys to GitHub Pages</p>
+</li>
+<li>
+<p>Action generates <code>preview.png</code> screenshot</p>
+</li>
+<li>
+<p>Developer submits repo URL to gallery</p>
+</li>
+<li>
+<p>Gallery stores metadata and links</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_benefits"><a class="anchor" href="#_benefits"></a>Benefits</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Benefit</th>
+<th class="tableblock halign-left valign-top">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Zero Security Risk</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">We never execute untrusted code</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>No Compute Costs</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Developers use GitHub&#8217;s free Actions minutes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Simple Architecture</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gallery is just a metadata database</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Developer Control</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full control over their build and demo</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_trade_offs"><a class="anchor" href="#_trade_offs"></a>Trade-offs</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Requires developers to set up GitHub Actions</p>
+</li>
+<li>
+<p>Preview consistency depends on developers keeping actions updated</p>
+</li>
+<li>
+<p>Can&#8217;t guarantee all previews use the same sample content</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We mitigate these with a <strong>template repository</strong> that developers can fork.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_comparison"><a class="anchor" href="#_comparison"></a>Comparison</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">Centralized</th>
+<th class="tableblock halign-left valign-top">Decentralized</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Compute Cost</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">We pay</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Developer pays (free)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High risk</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zero risk</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maintenance</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Complex</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simple</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Consistency</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Variable</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references"><a class="anchor" href="#_references"></a>References</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The original design discussion:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://gemini.google.com/app/e958944032de9856">Gemini conversation</a> exploring both approaches</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/site-dark-mode.js"></script>
+  </body>
+</html>

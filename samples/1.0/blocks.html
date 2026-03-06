@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Blocks &amp; Quotes :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/samples/1.0/blocks.html">
+    <meta name="description" content="Demonstrates sidebars, examples, quotes, and various block types.">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/site-extra.css">
+<script>
+(function () {
+  const themeKey = 'antora-theme';
+  const savedTheme = localStorage.getItem(themeKey);
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-theme');
+  }
+})();
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.devcentr.org">Dev-Centr Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="samples" data-version="1.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Samples</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Home</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="typography.html">Typography</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="code-blocks.html">Code Blocks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="admonitions.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="tables.html">Tables</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="blocks.html">Blocks &amp; Quotes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lists.html">Lists</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="images.html">Images &amp; Media</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Samples</span>
+    <span class="version">1.0</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../antora-dark-theme/0.1/guide/index.html">Antora Dark Theme</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../antora-dark-theme/0.1/guide/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../registry/index.html">Antora Extensions Registry</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../antora-themes-site/user/index.html">Antora Themes Gallery</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../DevCentr/index.html">DevCentr</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../msi-generator/index.html">MSI/MSIX Generator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../msi-generator/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../home/index.html">Project Portal</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Samples</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../templates/index.html">Templates</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../templates/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Samples</a></li>
+    <li><a href="blocks.html">Blocks &amp; Quotes</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/asciidoc-supplemental/antora-demo-template/edit/main/docs/modules/ROOT/pages/blocks.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Blocks &amp; Quotes</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page showcases different block types in AsciiDoc.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sidebar_block"><a class="anchor" href="#_sidebar_block"></a>Sidebar Block</h2>
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>This is a sidebar block.</p>
+</div>
+<div class="paragraph">
+<p>Sidebars are used for supplementary content that relates to but is separate from the main text.
+They&#8217;re often used for tangential information, fun facts, or related topics.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sidebars can contain lists</p>
+</li>
+<li>
+<p>And other block elements</p>
+</li>
+<li>
+<p>Like this one</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_example_block"><a class="anchor" href="#_example_block"></a>Example Block</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="title">Example 1. Example: Basic Configuration</div>
+<div class="content">
+<div class="paragraph">
+<p>Here&#8217;s an example of a basic configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">site:
+  title: My Documentation
+  url: https://docs.example.com</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This configuration sets the site title and base URL.</p>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 2. Example: With Multiple Steps</div>
+<div class="content">
+<div class="paragraph">
+<p>Follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a new file</p>
+</li>
+<li>
+<p>Add the configuration</p>
+</li>
+<li>
+<p>Save and test</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">touch config.yml
+echo "site:" &gt;&gt; config.yml
+antora config.yml</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_quote_block"><a class="anchor" href="#_quote_block"></a>Quote Block</h2>
+<div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Imagination is more important than knowledge.
+Knowledge is limited.
+Imagination encircles the world.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; Albert Einstein
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; Douglas Adams<br>
+<cite>The Hitchhiker's Guide to the Galaxy</cite>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quote_without_attribution"><a class="anchor" href="#_quote_without_attribution"></a>Quote Without Attribution</h3>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>This is a blockquote without attribution.
+It can span multiple paragraphs.</p>
+</div>
+<div class="paragraph">
+<p>Second paragraph of the quote.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_short_quote"><a class="anchor" href="#_short_quote"></a>Short Quote</h3>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Simple, direct quotes work well for emphasis.</p>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_verse_block"><a class="anchor" href="#_verse_block"></a>Verse Block</h2>
+<div class="sectionbody">
+<div class="verseblock">
+<pre class="content">Shall I compare thee to a summer&#8217;s day?
+Thou art more lovely and more temperate:
+Rough winds do shake the darling buds of May,
+And summer&#8217;s lease hath all too short a date.</pre>
+<div class="attribution">
+&#8212; William Shakespeare<br>
+<cite>Sonnet 18</cite>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_literal_block"><a class="anchor" href="#_literal_block"></a>Literal Block</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A literal block preserves whitespace and displays text in a monospace font:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>   ,---.
+  /     \
+ |       |
+ |  ^_^  |
+ |       |
+  \     /
+   `---'</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_listing_block"><a class="anchor" href="#_listing_block"></a>Listing Block</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre>This is a listing block.
+It's similar to a literal block but uses different delimiters.
+Commonly used for terminal output or file contents.
+
+$ command --option value
+Output line 1
+Output line 2</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_open_block"><a class="anchor" href="#_open_block"></a>Open Block</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An open block is a generic container that can hold other blocks:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>This is an open block.</p>
+</div>
+<div class="paragraph">
+<p>It can contain:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Lists</p>
+</li>
+<li>
+<p>Paragraphs</p>
+</li>
+<li>
+<p>Other elements</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">console.log('Even code blocks!');</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_passthrough_block"><a class="anchor" href="#_passthrough_block"></a>Passthrough Block</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A passthrough block passes content directly through without processing:</p>
+</div>
+<div style="padding: 1em; border: 1px dashed #0066cc; border-radius: 4px;">
+  <p style="margin: 0; color: #0066cc;">
+    This HTML is passed through directly.
+  </p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_collapsible_block_details"><a class="anchor" href="#_collapsible_block_details"></a>Collapsible Block (Details)</h2>
+<div class="sectionbody">
+<details>
+<summary class="title">Details</summary>
+<div class="content">
+<div class="paragraph">
+<p>This content is hidden by default.</p>
+</div>
+<div class="paragraph">
+<p>Click the summary to reveal it.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Hidden item 1</p>
+</li>
+<li>
+<p>Hidden item 2</p>
+</li>
+<li>
+<p>Hidden item 3</p>
+</li>
+</ul>
+</div>
+</div>
+</details>
+<details>
+<summary class="title">Click to reveal advanced configuration</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">advanced:
+  cache:
+    enabled: true
+    ttl: 3600
+  logging:
+    level: debug
+    format: json</code></pre>
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_comment_block"><a class="anchor" href="#_comment_block"></a>Comment Block</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The comment block above is not visible in the rendered output.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_block_with_role"><a class="anchor" href="#_block_with_role"></a>Block with Role</h2>
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>This paragraph has the "lead" role applied, making it stand out as introductory text.</p>
+</div>
+<div class="paragraph text-center">
+<p>This paragraph is centered using the text-center role.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nested_blocks"><a class="anchor" href="#_nested_blocks"></a>Nested Blocks</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="title">Example 3. Outer Example</div>
+<div class="content">
+<div class="paragraph">
+<p>This is the outer example block.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Inner Sidebar</div>
+<div class="paragraph">
+<p>This sidebar is nested inside the example block.</p>
+</div>
+<div class="paragraph">
+<p>Nesting blocks can help organize complex content.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Back to the outer example block.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/site-dark-mode.js"></script>
+  </body>
+</html>

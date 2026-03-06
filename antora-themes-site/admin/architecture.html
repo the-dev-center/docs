@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Architecture :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/antora-themes-site/admin/architecture.html">
+    <meta name="description" content="Technical architecture of the Antora Themes Gallery">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/site-extra.css">
+<script>
+(function () {
+  const themeKey = 'antora-theme';
+  const savedTheme = localStorage.getItem(themeKey);
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-theme');
+  }
+})();
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.devcentr.org">Dev-Centr Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora-themes-site" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../user/index.html">Antora Themes Gallery</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Theme Developers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../user/index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../user/requirements.html">Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../user/template.html">Using the Template</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../user/github-action.html">GitHub Action Setup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../user/submitting.html">Submitting Your Theme</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Administrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="concept.html">Design Decisions</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="architecture.html">Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Deployment</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="setup.html">Setup Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="environment.html">Environment Variables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="authentication.html">Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="database.html">Database Schema</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora Themes Gallery</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../antora-dark-theme/0.1/guide/index.html">Antora Dark Theme</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../antora-dark-theme/0.1/guide/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../registry/index.html">Antora Extensions Registry</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../user/index.html">Antora Themes Gallery</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../DevCentr/index.html">DevCentr</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../msi-generator/index.html">MSI/MSIX Generator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../msi-generator/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../home/index.html">Project Portal</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../samples/1.0/index.html">Samples</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../samples/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../templates/index.html">Templates</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../templates/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../user/index.html">Antora Themes Gallery</a></li>
+    <li>For Administrators</li>
+    <li><a href="architecture.html">Architecture</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/asciidoc-supplemental/antora-themes-site/edit/main/docs/modules/admin/pages/architecture.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Architecture</h1>
+<div class="sect1">
+<h2 id="_technology_stack"><a class="anchor" href="#_technology_stack"></a>Technology Stack</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_frontend"><a class="anchor" href="#_frontend"></a>Frontend</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Astro 5</strong> - Static site generation with islands architecture</p>
+</li>
+<li>
+<p><strong>SolidJS</strong> - Reactive components for search/filter UI</p>
+</li>
+<li>
+<p><strong>TailwindCSS v4</strong> - Utility-first CSS framework</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_backend"><a class="anchor" href="#_backend"></a>Backend</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Astro SSR</strong> - Server-side rendering</p>
+</li>
+<li>
+<p><strong>Vercel</strong> - Serverless deployment platform</p>
+</li>
+<li>
+<p><strong>Drizzle ORM</strong> - Type-safe SQL query builder</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_database"><a class="anchor" href="#_database"></a>Database</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Turso</strong> - Globally distributed SQLite (LibSQL)</p>
+</li>
+<li>
+<p>Edge locations for low-latency reads</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_authentication"><a class="anchor" href="#_authentication"></a>Authentication</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Lucia</strong> - Session-based auth library</p>
+</li>
+<li>
+<p><strong>Arctic</strong> - OAuth helper for multiple providers</p>
+</li>
+<li>
+<p><strong>Argon2</strong> - Password hashing</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_application_flow"><a class="anchor" href="#_application_flow"></a>Application Flow</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-mermaid hljs" data-lang="mermaid">graph TB
+    subgraph pages [Pages]
+        Home[Home Page]
+        Browse[Browse Page]
+        Submit[Submit Page]
+        Auth[Auth Pages]
+    end
+
+    subgraph auth [Authentication]
+        GitHub[GitHub OAuth]
+        GitLab[GitLab OAuth]
+        Google[Google OAuth]
+        Email[Email/Password]
+    end
+
+    subgraph data [Data Layer]
+        Drizzle[Drizzle ORM]
+        Turso[(Turso DB)]
+    end
+
+    Home --&gt; Drizzle
+    Browse --&gt; Drizzle
+    Submit --&gt; auth
+    auth --&gt; Drizzle
+    Drizzle --&gt; Turso</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_directory_structure"><a class="anchor" href="#_directory_structure"></a>Directory Structure</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">src/
+├── components/           # SolidJS components
+│   ├── ThemeCard.tsx
+│   ├── ThemeGallery.tsx
+│   └── SubmitThemeForm.tsx
+├── db/
+│   ├── index.ts          # Drizzle client
+│   └── schema.ts         # Table definitions
+├── layouts/
+│   └── Layout.astro      # Base layout with nav
+├── lib/
+│   ├── auth.ts           # Lucia setup
+│   ├── password.ts       # Argon2 helpers
+│   └── github.ts         # GitHub API helpers
+├── pages/
+│   ├── index.astro       # Home (featured themes)
+│   ├── browse.astro      # Full gallery
+│   ├── submit.astro      # Theme submission
+│   ├── login.astro
+│   ├── register.astro
+│   └── api/
+│       ├── auth/         # Auth endpoints
+│       └── themes/       # Theme API
+├── styles/
+│   └── global.css        # Tailwind imports
+└── types/
+    └── theme.ts          # TypeScript types</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_request_flow"><a class="anchor" href="#_request_flow"></a>Request Flow</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_page_request"><a class="anchor" href="#_page_request"></a>Page Request</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-mermaid hljs" data-lang="mermaid">sequenceDiagram
+    participant Browser
+    participant Vercel
+    participant Astro
+    participant Turso
+
+    Browser-&gt;&gt;Vercel: GET /browse
+    Vercel-&gt;&gt;Astro: Handle request
+    Astro-&gt;&gt;Turso: Query themes
+    Turso--&gt;&gt;Astro: Theme data
+    Astro--&gt;&gt;Vercel: Rendered HTML
+    Vercel--&gt;&gt;Browser: Response</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_theme_submission"><a class="anchor" href="#_theme_submission"></a>Theme Submission</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-mermaid hljs" data-lang="mermaid">sequenceDiagram
+    participant User
+    participant App
+    participant GitHub
+    participant Turso
+
+    User-&gt;&gt;App: Submit repo URL
+    App-&gt;&gt;GitHub: Fetch repo metadata
+    GitHub--&gt;&gt;App: Name, stars, etc.
+    App-&gt;&gt;GitHub: Check preview.png exists
+    GitHub--&gt;&gt;App: 200 OK
+    App-&gt;&gt;Turso: Insert theme (pending)
+    Turso--&gt;&gt;App: Success
+    App--&gt;&gt;User: Submission confirmed</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_key_files"><a class="anchor" href="#_key_files"></a>Key Files</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">File</th>
+<th class="tableblock halign-left valign-top">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>astro.config.mjs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Astro + Vercel adapter config</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>drizzle.config.ts</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Database migration config</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>src/db/schema.ts</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Table definitions (users, sessions, themes)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>src/lib/auth.ts</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lucia auth with OAuth providers</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>src/pages/api/auth/*</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OAuth login/callback endpoints</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>src/pages/api/themes/submit.ts</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Theme submission API</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_performance_considerations"><a class="anchor" href="#_performance_considerations"></a>Performance Considerations</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_home_page"><a class="anchor" href="#_home_page"></a>Home Page</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Server-renders 6 featured themes</p>
+</li>
+<li>
+<p>No client-side data fetching</p>
+</li>
+<li>
+<p>Minimal JavaScript</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_browse_page"><a class="anchor" href="#_browse_page"></a>Browse Page</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Full theme list with client-side search/filter</p>
+</li>
+<li>
+<p>SolidJS for reactive UI</p>
+</li>
+<li>
+<p>Hydrates after initial render</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_database_2"><a class="anchor" href="#_database_2"></a>Database</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Turso edge locations minimize latency</p>
+</li>
+<li>
+<p>Simple queries (no joins needed)</p>
+</li>
+<li>
+<p>Read-heavy workload suits SQLite</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/site-dark-mode.js"></script>
+  </body>
+</html>

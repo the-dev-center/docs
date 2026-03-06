@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Development Tools :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/templates/dev/development-tools.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/site-extra.css">
+<script>
+(function () {
+  const themeKey = 'antora-theme';
+  const savedTheme = localStorage.getItem(themeKey);
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-theme');
+  }
+})();
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.devcentr.org">Dev-Centr Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="templates" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Templates</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../architecture/overview.html">Architecture Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Architecture</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../architecture/overview.html">Core Pattern</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../product/environment-setup.html">Environment Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../product/documentation-preview.html">Doc Preview System</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../product/vcs-configuration.html">VCS &amp; Repos</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../committing.html">Committing Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../vscode-workspace.html">VSCode Workspace</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../guides/ssh-keys-setup.html">SSH keys setup (Windows)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../guides/corepack-installation-helper.html">Corepack installation helper</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../guides/tool-hierarchy.html">Tool hierarchy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../guides/why-use-corepack.html">Why use Corepack</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../guides/issues-repository.html">Issues Repository Pattern</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../terminology.html">Terminology</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="components.html">Dev: Components</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Dev: Getting Started</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="development-tools.html">Dev: Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="educational-resources.html">Dev: Educational Resources</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Templates</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../antora-dark-theme/0.1/guide/index.html">Antora Dark Theme</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../antora-dark-theme/0.1/guide/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../registry/index.html">Antora Extensions Registry</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../antora-themes-site/user/index.html">Antora Themes Gallery</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../DevCentr/index.html">DevCentr</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../msi-generator/index.html">MSI/MSIX Generator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../msi-generator/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../home/index.html">Project Portal</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../samples/1.0/index.html">Samples</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../samples/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Templates</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Templates</a></li>
+    <li><a href="development-tools.html">Dev: Development Tools</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/dev-centr/templates/edit/main/docs/modules/ROOT/pages/dev/development-tools.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Development Tools</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>We recommend these tools to improve your dev workflow:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.marticliment.com/unigetui/">UniGetUI</a> - A software package manager for Windows. It is a GUI for Microsoft&#8217;s <code>winget</code> and other CLI package managers. Install subsequent apps with it, if possible.</p>
+</li>
+<li>
+<p><a href="https://murmele.github.io/Gittyup/">Gittyup</a> - better Git UX than GitHub Desktop and VSCode source control. Alternatives: | <a href="https://rela.dev/">Rela.dev</a> | <a href="https://sourcegit-scm.github.io/">Sourcegit</a> | <a href="https://git-scm.com/downloads/guis">List of GitHub UI alternatives</a></p>
+</li>
+<li>
+<p><a href="https://github.com/masahide/OmniSSHAgent">OmniSSHAgent</a> - manages SSH agents on Windows. Having an SSH agent will allow you to commit to GitHub frequently without re-entering your SSH Key password for every commit. Windows&#8217;s SSH agent sometimes doesn&#8217;t play nice with VSCode.</p>
+</li>
+<li>
+<p><a href="https://apps.microsoft.com/detail/9N0DX20HK701?hl=en-us&amp;gl=US&amp;ocid=pdpshare">Windows Terminal</a> - Official Terminal rewrite from Microsoft. Load various shells in it, in a tabbed interface.</p>
+</li>
+<li>
+<p><a href="https://www.warp.dev/">Warp</a> - A nice terminal with AI integrated. Even if you don&#8217;t use the AI features, it provides a UX/UI upgrade over the traditional Terminal.</p>
+</li>
+<li>
+<p><a href="https://apps.microsoft.com/detail/9mz1snwt0n5d?hl=en-US&amp;gl=US">Powershell</a> (v7) - The modern Microsoft shell for Windows, Mac, and Linux+GNU+GNU. It is the de-facto standard in VSCode (if installed).</p>
+</li>
+<li>
+<p><a href="https://learn.microsoft.com/en-us/windows/advanced-settings/sudo/?wt.mc_id=windows_inproduct_sudo"><code>sudo</code> for Windows</a> - command line app to run elevated commands without memorizing Windows&#8217;s stupid commands.</p>
+</li>
+<li>
+<p>VSCode alternatives - If you find a better editor, like IntelliJ, Lapce, or Zed, contact me, @AMDphreak, and let&#8217;s see if we can get it added to the tutorial.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://lap.dev/lapce/">Lapce</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://zed.dev/">Zed</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://graviton.netlify.app/">Graviton</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://alternativeto.net/software/lapce/">More alternatives</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc">VisBug</a> - Lets you edit a web design in your browser using drag and drop while the page is live.</p>
+</li>
+<li>
+<p><a href="https://jam.dev">Jam.dev</a> - A bug reporting tool for web apps. It records video and saves logs automatically and generates a bug report for developers. Chrome plugin.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_web_apps"><a class="anchor" href="#_web_apps"></a>Web Apps</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://graphite.dev">Graphite.dev</a> - Code quality and review tool for GitHub</p>
+</li>
+<li>
+<p><a href="https://embrace.io/">Embrace.io</a> - Adds Telemetry reporting to our code. Built on OpenTelemetry, Embrace provides real user monitoring (RUM) across mobile and web to help teams understand exactly what users experience and why it matters.</p>
+</li>
+<li>
+<p><a href="https://docs.devin.ai/work-with-devin/deepwiki">DeepWiki</a> from Devin.ai - Automated Documentation for GitHub repositories (we already have this set up for our repos)</p>
+</li>
+<li>
+<p><code>shadcn/ui</code> Theme builders: These are a dime a dozen&#8230;&#8203; The official one: <a href="https://ui.shadcn.com/themes#themes">ui.shadcn.com</a></p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://themeshadcn.com/">themeshadcn</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://shadcn-ui-theme.vercel.app/">shadcn-ui-theme</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://shadcnstudio.com/theme-generator">shadcnstudio</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://themecn.dev/">themecn</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://tweakcn.com/">tweakcn</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://tweakcn.com/">tweakcn</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.readyjs.dev/tools/shadcn-ui-theme-generator">readyjs</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Free <code>shadcn</code> components&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.shadcn.io/components/data/gantt">shadcn.io</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_future_tools"><a class="anchor" href="#_future_tools"></a>Future tools</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jj-vcs/jj"><code>jj</code> (Jujutsu)</a> - Experimental version control system from Google that replaces Git entirely, but uses Git internally.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/site-dark-mode.js"></script>
+  </body>
+</html>

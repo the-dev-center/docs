@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VSCode Workspace Configuration :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/templates/vscode-workspace.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../_/css/site.css">
+<link rel="stylesheet" href="../_/css/site-extra.css">
+<script>
+(function () {
+  const themeKey = 'antora-theme';
+  const savedTheme = localStorage.getItem(themeKey);
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-theme');
+  }
+})();
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.devcentr.org">Dev-Centr Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="templates" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Templates</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="architecture/overview.html">Architecture Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Architecture</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture/overview.html">Core Pattern</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="product/environment-setup.html">Environment Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="product/documentation-preview.html">Doc Preview System</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="product/vcs-configuration.html">VCS &amp; Repos</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="committing.html">Committing Code</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="vscode-workspace.html">VSCode Workspace</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guides/ssh-keys-setup.html">SSH keys setup (Windows)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guides/corepack-installation-helper.html">Corepack installation helper</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guides/tool-hierarchy.html">Tool hierarchy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guides/why-use-corepack.html">Why use Corepack</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guides/issues-repository.html">Issues Repository Pattern</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="terminology.html">Terminology</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="dev/components.html">Dev: Components</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="dev/getting-started.html">Dev: Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="dev/development-tools.html">Dev: Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="dev/educational-resources.html">Dev: Educational Resources</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Templates</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../antora-dark-theme/0.1/guide/index.html">Antora Dark Theme</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../antora-dark-theme/0.1/guide/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../registry/index.html">Antora Extensions Registry</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../antora-themes-site/user/index.html">Antora Themes Gallery</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../DevCentr/index.html">DevCentr</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../msi-generator/index.html">MSI/MSIX Generator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../msi-generator/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../home/index.html">Project Portal</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../samples/1.0/index.html">Samples</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../samples/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Templates</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Templates</a></li>
+    <li><a href="vscode-workspace.html">VSCode Workspace</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/dev-centr/templates/edit/main/docs/modules/ROOT/pages/vscode-workspace.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">VSCode Workspace Configuration</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>templates</code> repository provides workspace configurations and boilerplate files for modern development projects. It contains both template files that should be copied to new repositories and active configuration files that can be included in workspace files.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_repository_structure"><a class="anchor" href="#_repository_structure"></a>Repository Structure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>templates</code> repository is organized as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Root level: Files specific to the templates repository itself</p>
+</li>
+<li>
+<p><code>workspaces/</code>: Contains VS Code workspace templates for different workflows and configurations</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_workspace_templates"><a class="anchor" href="#_workspace_templates"></a>Workspace Templates</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>workspaces/</code> folder contains template folders that serve dual purposes:</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Each template folder now includes a <code>README.adoc</code> with usage notes, extension lists, and workspace instructions. Open the README directly inside <code>workspaces/{name}</code> when you need a refresher on what a template provides.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_template_files_copy_to_new_repos"><a class="anchor" href="#_template_files_copy_to_new_repos"></a>Template Files (Copy to New Repos)</h3>
+<div class="paragraph">
+<p>Each template folder contains files that should be copied to new repositories:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>.gitattributes</code> - Git line ending configuration</p>
+</li>
+<li>
+<p><code>.gitignore</code> - Git ignore patterns</p>
+</li>
+<li>
+<p><code>.hintrc</code> - Webhint configuration</p>
+</li>
+<li>
+<p><code>.github/FUNDING.yml</code> - GitHub funding configuration</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_active_configuration_files_include_in_workspaces"><a class="anchor" href="#_active_configuration_files_include_in_workspaces"></a>Active Configuration Files (Include in Workspaces)</h3>
+<div class="paragraph">
+<p>Each template folder also contains active configuration files that can be copied into your project workspace:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>{template}.code-workspace</code> - Combined settings and extension recommendations</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_available_templates"><a class="anchor" href="#_available_templates"></a>Available Templates</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>_common/</code> - Common extensions and template files for all projects (docs, git, media tools)</p>
+</li>
+<li>
+<p><code>astro/</code> - Astro specific extensions and optimized settings</p>
+</li>
+<li>
+<p><code>javascript/</code> - JavaScript/TypeScript workflow extensions (Biome, dprint)</p>
+</li>
+<li>
+<p><code>next.js/</code> - Next.js specific extensions (Next.js assistant, icons, snippets)</p>
+</li>
+<li>
+<p><code>python/</code> - Python workflow extensions (Ruff formatter)</p>
+</li>
+<li>
+<p><code>rust/</code> - Rust workflow extensions</p>
+</li>
+<li>
+<p><code>solidstart/</code> - SolidStart workflow extensions</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_templates_in_workspaces"><a class="anchor" href="#_using_templates_in_workspaces"></a>Using Templates in Workspaces</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To use a template in your project workspace, we recommend copying the relevant blocks from <strong>both</strong> the <code>_common</code> template and your specific tech stack template (e.g., <code>javascript/</code> or <code>next.js/</code>) directly into your project&#8217;s <code>.code-workspace</code> file.</p>
+</div>
+<div class="paragraph">
+<p>Each template folder contains its own <code>.code-workspace</code> file pre-configured with industry-standard settings and extension recommendations.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the <code>common.code-workspace</code> file in <code>_common/</code> and copy the <code>"settings"</code> and <code>"extensions"</code> blocks.</p>
+</li>
+<li>
+<p>Open the <code>.code-workspace</code> file within your desired tech stack folder (e.g., <code>astro.code-workspace</code>).</p>
+</li>
+<li>
+<p>Merge its <code>"settings"</code> and <code>"extensions"</code> blocks into your project&#8217;s workspace file, being careful to combine rather than overwrite the arrays and objects.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Copying these blocks directly into your project ensures a self-contained and fully configured development environment that matches the standards defined in the Dev Center, without the complexity of managing relative folder paths in your workspace definition.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_global_workspace"><a class="anchor" href="#_global_workspace"></a>Global Workspace</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>workspaces/global.code-workspace</code> file provides an example workspace definition that includes the template repository itself, useful as a starting point for creating your own multi-root workspaces.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_settings_and_extension_recommendations"><a class="anchor" href="#_settings_and_extension_recommendations"></a>Settings and Extension Recommendations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Important:</strong> The <code>.vscode/settings.json</code> and <code>.vscode/extensions.json</code> files do NOT automatically apply to other repositories when included in a multi-root workspace.</p>
+</div>
+<div class="paragraph">
+<p>To share settings and extension recommendations across repositories, you must embed them directly in your project&#8217;s <code>.code-workspace</code> file. We provide pre-configured <code>.code-workspace</code> files in each template folder that you can copy from.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>Settings Precedence &amp; Priority:</strong> VS Code settings follow a strict hierarchy of visibility: <strong>User Settings &gt; Workspace Settings (.code-workspace) &gt; Folder Settings (.vscode/settings.json)</strong>.</p>
+</div>
+<div class="paragraph">
+<p>However, <strong>Language-specific settings</strong> (e.g., <code>[json]</code>) always have higher priority than <strong>Global settings</strong> (e.g., <code>editor.defaultFormatter</code>), even if they are defined at a lower-priority scope.</p>
+</div>
+<div class="paragraph">
+<p>For example, if a user has a "User" level language default set for JSON (like Prettier), it will override a "Workspace" level global default (like Biome). To ensure project standards are enforced, we use explicit language-level blocks in our workspace files to provide the necessary specificity to win against personal defaults.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_new_templates"><a class="anchor" href="#_creating_new_templates"></a>Creating New Templates</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When creating a new template folder:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a folder named after the technology or workflow (e.g., <code>{workflow}/</code>) in <code>workspaces/</code></p>
+</li>
+<li>
+<p>Add a <code>README.adoc</code> explaining the template&#8217;s purpose and contents</p>
+</li>
+<li>
+<p>Add a <code>{workflow}.code-workspace</code> file with the relevant <code>"settings"</code> and <code>"extensions"</code> blocks</p>
+</li>
+<li>
+<p>Optionally add template files (<code>.gitattributes</code>, <code>.gitignore</code>, etc.) that should be copied to new repos</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>Extension Sourcing:</strong> We only list extensions that are available on the community-run <a href="https://open-vsx.org">OpenVSX marketplace</a>. That guarantees they can be installed in Cursor and other third-party VS Code forks without extra setup.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Template folders are named after the technology or workflow they support, making it clear what the template is for when seen in the workspace.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/site-dark-mode.js"></script>
+  </body>
+</html>

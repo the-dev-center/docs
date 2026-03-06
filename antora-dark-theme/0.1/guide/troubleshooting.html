@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Troubleshooting :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/antora-dark-theme/0.1/guide/troubleshooting.html">
+    <meta name="description" content="Solutions to common issues with the Antora Dark Theme.">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="../../../_/css/site-extra.css">
+<script>
+(function () {
+  const themeKey = 'antora-theme';
+  const savedTheme = localStorage.getItem(themeKey);
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-theme');
+  }
+})();
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.devcentr.org">Dev-Centr Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora-dark-theme" data-version="0.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Antora Dark Theme</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="customization.html">Customization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="how-it-works.html">How It Works</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="troubleshooting.html">Troubleshooting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Theme Demo</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Demo Home</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../typography.html">Typography</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../code-blocks.html">Code Blocks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../admonitions.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../tables.html">Tables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blocks.html">Blocks &amp; Quotes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../lists.html">Lists</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../images.html">Images &amp; Media</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../extensions.html">Extensions</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora Dark Theme</span>
+    <span class="version">0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Antora Dark Theme</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../registry/index.html">Antora Extensions Registry</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../antora-themes-site/user/index.html">Antora Themes Gallery</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../DevCentr/index.html">DevCentr</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../msi-generator/index.html">MSI/MSIX Generator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../msi-generator/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../home/index.html">Project Portal</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../samples/1.0/index.html">Samples</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../samples/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../templates/index.html">Templates</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../templates/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Antora Dark Theme</a></li>
+    <li>Documentation</li>
+    <li><a href="troubleshooting.html">Troubleshooting</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/asciidoc-supplemental/antora-dark-theme/edit/main/docs/modules/guide/pages/troubleshooting.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Troubleshooting</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page covers common issues and their solutions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_toggle_button_doesnt_appear"><a class="anchor" href="#_toggle_button_doesnt_appear"></a>Toggle Button Doesn&#8217;t Appear</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Symptom:</strong> The sun/moon toggle button is missing from the navbar.</p>
+</div>
+<div class="paragraph">
+<p><strong>Possible causes:</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Supplemental files not loaded</strong> - Verify your <code>antora-playbook.yml</code> has the correct path:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">ui:
+  supplemental_files: ./node_modules/antora-dark-theme/supplemental-ui</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Different UI bundle structure</strong> - The toggle button is injected into <code>.navbar-end</code>. If your UI bundle has a different navbar structure, modify the selector in <code>site-dark-mode.js</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// Change this line to match your navbar structure
+const navbarEnd = document.querySelector('.navbar-end');</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>JavaScript error</strong> - Check the browser console for errors that might prevent the script from running.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dark_mode_doesnt_persist"><a class="anchor" href="#_dark_mode_doesnt_persist"></a>Dark Mode Doesn&#8217;t Persist</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Symptom:</strong> Dark mode resets to light mode on page reload.</p>
+</div>
+<div class="paragraph">
+<p><strong>Possible causes:</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>localStorage blocked</strong> - Some browsers or extensions block <code>localStorage</code>. Check your browser settings.</p>
+</li>
+<li>
+<p><strong>Incognito/private mode</strong> - Some browsers restrict <code>localStorage</code> in private browsing.</p>
+</li>
+<li>
+<p><strong>Content Security Policy</strong> - If your site has a strict CSP, it might block the inline script. Add the script hash to your CSP or move the script to an external file.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>To test if <code>localStorage</code> is working:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// Run in browser console
+localStorage.setItem('test', 'value');
+console.log(localStorage.getItem('test')); // Should print "value"</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_flash_of_light_mode_on_page_load"><a class="anchor" href="#_flash_of_light_mode_on_page_load"></a>Flash of Light Mode on Page Load</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Symptom:</strong> The page briefly shows light mode before switching to dark.</p>
+</div>
+<div class="paragraph">
+<p><strong>Possible causes:</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>head-meta.hbs not loading</strong> - Ensure the partial is in the correct location:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">supplemental-ui/partials/head-meta.hbs</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>CSP blocking inline script</strong> - The FOUC prevention relies on an inline script in <code>&lt;head&gt;</code>. If blocked by CSP, add the script&#8217;s hash to your policy.</p>
+</li>
+<li>
+<p><strong>Caching issue</strong> - Clear your browser cache and rebuild the site.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_some_elements_arent_styled"><a class="anchor" href="#_some_elements_arent_styled"></a>Some Elements Aren&#8217;t Styled</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Symptom:</strong> Certain page elements remain light-colored in dark mode.</p>
+</div>
+<div class="paragraph">
+<p><strong>Solution:</strong> The CSS covers the most common Antora elements, but custom extensions or modified UI bundles may have additional elements.</p>
+</div>
+<div class="paragraph">
+<p>Add styles for unstyled elements in <code>site-extra.css</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">html.dark-theme .your-custom-element {
+  background-color: #25262b;
+  color: #c1c2c5;
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Use browser DevTools to inspect the unstyled element and find its CSS class.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_code_blocks_look_wrong"><a class="anchor" href="#_code_blocks_look_wrong"></a>Code Blocks Look Wrong</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Symptom:</strong> Syntax highlighting colors clash with dark background.</p>
+</div>
+<div class="paragraph">
+<p><strong>Solution:</strong> The theme includes styles for highlight.js code blocks. If you&#8217;re using a different syntax highlighter (like Prism or Rouge), you may need to add custom styles or use a dark-compatible theme for that highlighter.</p>
+</div>
+<div class="paragraph">
+<p>For highlight.js, ensure the dark theme styles are present in <code>site-extra.css</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">html.dark-theme .hljs {
+  background: #1e1e1e;
+  color: #dcdcdc;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_theme_toggle_conflicts_with_custom_javascript"><a class="anchor" href="#_theme_toggle_conflicts_with_custom_javascript"></a>Theme Toggle Conflicts with Custom JavaScript</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Symptom:</strong> Custom scripts interfere with theme switching.</p>
+</div>
+<div class="paragraph">
+<p><strong>Solution:</strong> The theme stores its state in:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>localStorage</code> key: <code>antora-theme</code></p>
+</li>
+<li>
+<p>HTML class: <code>dark-theme</code> on the <code>&lt;html&gt;</code> element</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If your scripts modify either of these, conflicts may occur. Ensure your code checks for and respects these values:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// Check current theme
+const isDark = document.documentElement.classList.contains('dark-theme');
+
+// Listen for theme changes
+const observer = new MutationObserver((mutations) =&gt; {
+  mutations.forEach((mutation) =&gt; {
+    if (mutation.attributeName === 'class') {
+      const isDark = document.documentElement.classList.contains('dark-theme');
+      console.log('Theme changed:', isDark ? 'dark' : 'light');
+    }
+  });
+});
+
+observer.observe(document.documentElement, { attributes: true });</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_still_having_issues"><a class="anchor" href="#_still_having_issues"></a>Still Having Issues?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If your issue isn&#8217;t covered here:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Check the <a href="https://github.com/antora-supplemental/antora-dark-theme/issues">GitHub Issues</a> for similar problems</p>
+</li>
+<li>
+<p>Open a new issue with:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Browser and version</p>
+</li>
+<li>
+<p>Antora version</p>
+</li>
+<li>
+<p>Steps to reproduce</p>
+</li>
+<li>
+<p>Browser console errors (if any)</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/site-dark-mode.js"></script>
+  </body>
+</html>

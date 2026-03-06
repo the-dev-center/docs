@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Lists :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/samples/1.0/lists.html">
+    <meta name="description" content="Demonstrates ordered, unordered, and description lists.">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/site-extra.css">
+<script>
+(function () {
+  const themeKey = 'antora-theme';
+  const savedTheme = localStorage.getItem(themeKey);
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-theme');
+  }
+})();
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.devcentr.org">Dev-Centr Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="samples" data-version="1.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Samples</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Home</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="typography.html">Typography</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="code-blocks.html">Code Blocks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="admonitions.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="tables.html">Tables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="blocks.html">Blocks &amp; Quotes</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="lists.html">Lists</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="images.html">Images &amp; Media</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Samples</span>
+    <span class="version">1.0</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../antora-dark-theme/0.1/guide/index.html">Antora Dark Theme</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../antora-dark-theme/0.1/guide/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../registry/index.html">Antora Extensions Registry</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../antora-themes-site/user/index.html">Antora Themes Gallery</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../DevCentr/index.html">DevCentr</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../msi-generator/index.html">MSI/MSIX Generator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../msi-generator/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../home/index.html">Project Portal</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Samples</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../templates/index.html">Templates</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../templates/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Samples</a></li>
+    <li><a href="lists.html">Lists</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/asciidoc-supplemental/antora-demo-template/edit/main/docs/modules/ROOT/pages/lists.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Lists</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page showcases different list types and nesting.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unordered_lists"><a class="anchor" href="#_unordered_lists"></a>Unordered Lists</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_basic_unordered_list"><a class="anchor" href="#_basic_unordered_list"></a>Basic Unordered List</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>First item</p>
+</li>
+<li>
+<p>Second item</p>
+</li>
+<li>
+<p>Third item</p>
+</li>
+<li>
+<p>Fourth item</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nested_unordered_list"><a class="anchor" href="#_nested_unordered_list"></a>Nested Unordered List</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Level 1 item A</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Level 2 item A1</p>
+</li>
+<li>
+<p>Level 2 item A2</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Level 3 item A2a</p>
+</li>
+<li>
+<p>Level 3 item A2b</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Level 2 item A3</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Level 1 item B</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Level 2 item B1</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_list_with_complex_content"><a class="anchor" href="#_list_with_complex_content"></a>List with Complex Content</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>First item with a longer description that wraps to multiple lines to demonstrate how list item text is handled.</p>
+</li>
+<li>
+<p>Second item with inline formatting: <strong>bold</strong>, <em>italic</em>, and <code>code</code>.</p>
+</li>
+<li>
+<p>Third item with a link: <a href="https://antora.org">Antora Documentation</a></p>
+</li>
+<li>
+<p>Fourth item with multiple paragraphs:</p>
+<div class="paragraph">
+<p>This is a continuation paragraph.
+It belongs to the fourth item.</p>
+</div>
+<div class="paragraph">
+<p>And another continuation paragraph.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ordered_lists"><a class="anchor" href="#_ordered_lists"></a>Ordered Lists</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_basic_ordered_list"><a class="anchor" href="#_basic_ordered_list"></a>Basic Ordered List</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>First step</p>
+</li>
+<li>
+<p>Second step</p>
+</li>
+<li>
+<p>Third step</p>
+</li>
+<li>
+<p>Fourth step</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nested_ordered_list"><a class="anchor" href="#_nested_ordered_list"></a>Nested Ordered List</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Main step one</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Sub-step 1.1</p>
+</li>
+<li>
+<p>Sub-step 1.2</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Sub-sub-step 1.2.1</p>
+</li>
+<li>
+<p>Sub-sub-step 1.2.2</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Sub-step 1.3</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Main step two</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Sub-step 2.1</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Main step three</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ordered_list_with_custom_start"><a class="anchor" href="#_ordered_list_with_custom_start"></a>Ordered List with Custom Start</h3>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>This starts at five</p>
+</li>
+<li>
+<p>Six</p>
+</li>
+<li>
+<p>Seven</p>
+</li>
+<li>
+<p>Eight</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ordered_list_with_different_numbering_styles"><a class="anchor" href="#_ordered_list_with_different_numbering_styles"></a>Ordered List with Different Numbering Styles</h3>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Item a</p>
+</li>
+<li>
+<p>Item b</p>
+</li>
+<li>
+<p>Item c</p>
+</li>
+</ol>
+</div>
+<div class="olist upperroman">
+<ol class="upperroman" type="I">
+<li>
+<p>Item I</p>
+</li>
+<li>
+<p>Item II</p>
+</li>
+<li>
+<p>Item III</p>
+</li>
+</ol>
+</div>
+<div class="olist lowergreek">
+<ol class="lowergreek">
+<li>
+<p>Item α</p>
+</li>
+<li>
+<p>Item β</p>
+</li>
+<li>
+<p>Item γ</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mixed_lists"><a class="anchor" href="#_mixed_lists"></a>Mixed Lists</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Unordered item</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Nested unordered</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ordered inside unordered</p>
+</li>
+<li>
+<p>Second ordered item</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Back to nested unordered</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Another unordered item</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_description_lists"><a class="anchor" href="#_description_lists"></a>Description Lists</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_basic_description_list"><a class="anchor" href="#_basic_description_list"></a>Basic Description List</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Term 1</dt>
+<dd>
+<p>Definition for term 1.
+This can span multiple lines.</p>
+</dd>
+<dt class="hdlist1">Term 2</dt>
+<dd>
+<p>Definition for term 2.</p>
+</dd>
+<dt class="hdlist1">Term 3</dt>
+<dd>
+<p>Definition for term 3.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_description_list_with_nested_content"><a class="anchor" href="#_description_list_with_nested_content"></a>Description List with Nested Content</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">First Term</dt>
+<dd>
+<p>This is the definition of the first term.</p>
+<div class="paragraph">
+<p>It includes a continuation paragraph.</p>
+</div>
+</dd>
+<dt class="hdlist1">Second Term</dt>
+<dd>
+<p>This term has a code block:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const example = "code in description list";</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Third Term</dt>
+<dd>
+<p>This term has a nested list:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Sub-item A</p>
+</li>
+<li>
+<p>Sub-item B</p>
+</li>
+<li>
+<p>Sub-item C</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_horizontal_description_list"><a class="anchor" href="#_horizontal_description_list"></a>Horizontal Description List</h3>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+CPU
+</td>
+<td class="hdlist2">
+<p>Central Processing Unit</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+RAM
+</td>
+<td class="hdlist2">
+<p>Random Access Memory</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+SSD
+</td>
+<td class="hdlist2">
+<p>Solid State Drive</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+HDD
+</td>
+<td class="hdlist2">
+<p>Hard Disk Drive</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_qa_style_description_list"><a class="anchor" href="#_qa_style_description_list"></a>Q&amp;A Style Description List</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em>What is Antora?</em></p>
+<p>Antora is a documentation site generator for AsciiDoc content.</p>
+</li>
+<li>
+<p><em>What is AsciiDoc?</em></p>
+<p>AsciiDoc is a lightweight markup language for writing documentation.</p>
+</li>
+<li>
+<p><em>How do I build a site?</em></p>
+<p>Run <code>antora antora-playbook.yml</code> from your project root.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_checklists"><a class="anchor" href="#_checklists"></a>Checklists</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_task_list"><a class="anchor" href="#_task_list"></a>Task List</h3>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> Completed task</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Another completed task</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Pending task</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Another pending task</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Final completed task</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_interactive_checklist_static"><a class="anchor" href="#_interactive_checklist_static"></a>Interactive Checklist (Static)</h3>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> Required: Install Node.js 18+</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Required: Install pnpm</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Optional: Configure custom theme</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Optional: Set up CI/CD</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lists_with_block_content"><a class="anchor" href="#_lists_with_block_content"></a>Lists with Block Content</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>First step</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">pnpm install</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Second step</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Make sure to run this from the project root.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">pnpm build</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Third step</p>
+<div class="exampleblock">
+<div class="title">Example 1. Expected output</div>
+<div class="content">
+<div class="paragraph">
+<p>Build completed successfully.
+Output written to ./build/site</p>
+</div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_compact_lists_no_blank_lines_between_items"><a class="anchor" href="#_compact_lists_no_blank_lines_between_items"></a>Compact Lists (No Blank Lines Between Items)</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Compact item one</p>
+</li>
+<li>
+<p>Compact item two</p>
+</li>
+<li>
+<p>Compact item three</p>
+</li>
+<li>
+<p>Compact item four</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bibliography_style_list"><a class="anchor" href="#_bibliography_style_list"></a>Bibliography Style List</h2>
+<div class="sectionbody">
+<div class="ulist bibliography">
+<ul class="bibliography">
+<li>
+<p><a id="ref1"></a>[ref1] Author One. <em>Title of First Reference</em>. Publisher, 2024.</p>
+</li>
+<li>
+<p><a id="ref2"></a>[ref2] Author Two. <em>Title of Second Reference</em>. Publisher, 2023.</p>
+</li>
+<li>
+<p><a id="ref3"></a>[ref3] Author Three. <em>Title of Third Reference</em>. Publisher, 2022.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/site-dark-mode.js"></script>
+  </body>
+</html>

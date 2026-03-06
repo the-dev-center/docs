@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SSH Key Management and Setup Tutorial for Windows :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/templates/guides/ssh-keys-setup.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/site-extra.css">
+<script>
+(function () {
+  const themeKey = 'antora-theme';
+  const savedTheme = localStorage.getItem(themeKey);
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-theme');
+  }
+})();
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.devcentr.org">Dev-Centr Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="templates" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Templates</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../architecture/overview.html">Architecture Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Architecture</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../architecture/overview.html">Core Pattern</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../product/environment-setup.html">Environment Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../product/documentation-preview.html">Doc Preview System</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../product/vcs-configuration.html">VCS &amp; Repos</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../committing.html">Committing Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../vscode-workspace.html">VSCode Workspace</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="ssh-keys-setup.html">SSH keys setup (Windows)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="corepack-installation-helper.html">Corepack installation helper</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="tool-hierarchy.html">Tool hierarchy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="why-use-corepack.html">Why use Corepack</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="issues-repository.html">Issues Repository Pattern</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../terminology.html">Terminology</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../dev/components.html">Dev: Components</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../dev/getting-started.html">Dev: Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../dev/development-tools.html">Dev: Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../dev/educational-resources.html">Dev: Educational Resources</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Templates</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../antora-dark-theme/0.1/guide/index.html">Antora Dark Theme</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../antora-dark-theme/0.1/guide/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../registry/index.html">Antora Extensions Registry</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../antora-themes-site/user/index.html">Antora Themes Gallery</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../DevCentr/index.html">DevCentr</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../msi-generator/index.html">MSI/MSIX Generator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../msi-generator/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../home/index.html">Project Portal</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../samples/1.0/index.html">Samples</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../samples/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">Templates</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Templates</a></li>
+    <li><a href="ssh-keys-setup.html">SSH keys setup (Windows)</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/dev-centr/templates/edit/main/docs/modules/ROOT/pages/guides/ssh-keys-setup.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">SSH Key Management and Setup Tutorial for Windows</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This tutorial will guide you through setting up SSH keys for GitHub on Windows, focusing on best practices and how to configure SSH to use keys located in a non-default path. For broader tooling context, see <a href="tool-hierarchy.html" class="xref page">Tool hierarchy</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ssh_key_best_practices"><a class="anchor" href="#_ssh_key_best_practices"></a>SSH Key Best Practices</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before we dive into the setup, understanding SSH key best practices is crucial for maintaining a secure development environment.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use SSH Keys over Passwords: SSH keys provide a significantly more secure authentication method than passwords, making them highly resistant to brute-force attacks. Disable password authentication on your servers if possible.</p>
+</li>
+<li>
+<p>Use Strong Key Types and Lengths:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ed25519: This is the recommended algorithm due to its strong security and smaller key sizes.</p>
+</li>
+<li>
+<p>RSA: If Ed25519 is not supported by your systems, use RSA with at least 2048 bits, preferably 4096 bits for more sensitive connections.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Always Use a Passphrase: Encrypt your private key with a strong, unique passphrase. This adds an extra layer of security, protecting your private key even if it falls into the wrong hands. The passphrase only decrypts the key on your local machine; it&#8217;s never transmitted over the network.</p>
+</li>
+<li>
+<p>Secure Private Key Permissions: The private key file should never be readable by anyone other than you. Incorrect permissions are a common cause of SSH connection failures.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Windows: You need to explicitly set file permissions to allow only your user account to have full control. Remove inheritance and all other user/group permissions.</p>
+</li>
+<li>
+<p>Linux+GNU+GNU/macOS: The private key should have <code>600</code> permissions (<code>-rw-------</code>).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Keep Private Keys Private: Never share your private key with anyone or upload it to insecure locations (e.g., public code repositories).</p>
+</li>
+<li>
+<p>Use <code>ssh-agent</code>: The <code>ssh-agent</code> is a program that holds private keys used for public key authentication. It reduces the need to enter your passphrase repeatedly by keeping the decrypted key in memory for the duration of your session (or until a specified timeout).</p>
+</li>
+<li>
+<p>Monitor Key Usage and Rotate Keys: Regularly review your SSH keys and remove any that are no longer needed. Consider rotating your keys periodically, similar to how you would change passwords.</p>
+</li>
+<li>
+<p>Use Separate Keys for Different Purposes: For enhanced security, consider using different SSH keys for different services or environments (e.g., one for GitHub, one for a work server, one for personal projects). This limits the blast radius if one key is compromised.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setup_instructions_ssh_keys_on_a_different_drivepath_windows"><a class="anchor" href="#_setup_instructions_ssh_keys_on_a_different_drivepath_windows"></a>Setup Instructions: SSH Keys on a Different Drive/Path (Windows)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This tutorial assumes you have OpenSSH client installed on Windows (it&#8217;s usually a default feature on modern Windows versions).</p>
+</div>
+<div class="sect2">
+<h3 id="_step_1_generate_a_new_ssh_key_pair"><a class="anchor" href="#_step_1_generate_a_new_ssh_key_pair"></a>Step 1: Generate a New SSH Key Pair</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open PowerShell</p>
+</li>
+<li>
+<p>Generate the Key:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-pwsh hljs" data-lang="pwsh">ssh-keygen -t ed25519 -C "your_email@example.com"</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>-t ed25519</code>: Specifies the Ed25519 algorithm, which is recommended. If you need RSA for legacy reasons, use <code>-t rsa -b 4096</code>.</p>
+</li>
+<li>
+<p><code>-C "<a href="mailto:your_email@example.com">your_email@example.com</a>"</code>: Adds a comment to the public key, typically your email, which helps identify the key.</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Specify the Key Location when prompted, e.g. <code>D:\SSHKeys\github_ed25519</code>.</p>
+</li>
+<li>
+<p>Enter a passphrase when prompted.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_2_set_correct_permissions_for_the_private_key"><a class="anchor" href="#_step_2_set_correct_permissions_for_the_private_key"></a>Step 2: Set Correct Permissions for the Private Key</h3>
+<div class="paragraph">
+<p>Windows requires specific permissions for private key files. If the permissions are too broad, SSH will refuse to use the key.</p>
+</div>
+<div class="paragraph">
+<p>Follow the steps in File Explorer to disable inheritance, remove other principals, and grant only your user Full control.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_3_add_the_key_to_ssh_agent"><a class="anchor" href="#_step_3_add_the_key_to_ssh_agent"></a>Step 3: Add the Key to ssh-agent</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-pwsh hljs" data-lang="pwsh">Get-Service ssh-agent | Set-Service -StartupType Automatic
+Start-Service ssh-agent
+Get-Service ssh-agent</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Add your key:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-pwsh hljs" data-lang="pwsh">ssh-add D:/SSHKeys/github_ed25519</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_4_configure_ssh_client_sshconfig"><a class="anchor" href="#_step_4_configure_ssh_client_sshconfig"></a>Step 4: Configure SSH Client (<code>~/.ssh/config</code>)</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sshconfig hljs" data-lang="sshconfig">Host github.com
+  HostName github.com
+  User git
+  IdentityFile D:/SSHKeys/github_ed25519
+  AddKeysToAgent yes
+  UseKeychain yes</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_5_add_your_public_key_to_github"><a class="anchor" href="#_step_5_add_your_public_key_to_github"></a>Step 5: Add Your Public Key to GitHub</h3>
+<div class="paragraph">
+<p>Copy the <code>.pub</code> file contents and add it under GitHub Settings → SSH and GPG keys.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_6_test_your_ssh_connection_to_github"><a class="anchor" href="#_step_6_test_your_ssh_connection_to_github"></a>Step 6: Test Your SSH Connection to GitHub</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-pwsh hljs" data-lang="pwsh">ssh -T git@github.com</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/site-dark-mode.js"></script>
+  </body>
+</html>

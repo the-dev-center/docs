@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Submitting Your Theme :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/antora-themes-site/user/submitting.html">
+    <meta name="description" content="How to add your theme to the Antora Themes Gallery">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/site-extra.css">
+<script>
+(function () {
+  const themeKey = 'antora-theme';
+  const savedTheme = localStorage.getItem(themeKey);
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-theme');
+  }
+})();
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.devcentr.org">Dev-Centr Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora-themes-site" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Antora Themes Gallery</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Theme Developers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="requirements.html">Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="template.html">Using the Template</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="github-action.html">GitHub Action Setup</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="submitting.html">Submitting Your Theme</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Administrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../admin/index.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../admin/concept.html">Design Decisions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../admin/architecture.html">Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Deployment</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../admin/setup.html">Setup Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../admin/environment.html">Environment Variables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../admin/authentication.html">Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../admin/database.html">Database Schema</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora Themes Gallery</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../antora-dark-theme/0.1/guide/index.html">Antora Dark Theme</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../antora-dark-theme/0.1/guide/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../registry/index.html">Antora Extensions Registry</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Antora Themes Gallery</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../DevCentr/index.html">DevCentr</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../msi-generator/index.html">MSI/MSIX Generator</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../msi-generator/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../home/index.html">Project Portal</a></div>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../samples/1.0/index.html">Samples</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../samples/1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../templates/index.html">Templates</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../templates/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Antora Themes Gallery</a></li>
+    <li>For Theme Developers</li>
+    <li><a href="submitting.html">Submitting Your Theme</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/asciidoc-supplemental/antora-themes-site/edit/main/docs/modules/user/pages/submitting.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Submitting Your Theme</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Once your theme meets the <a href="requirements.html" class="xref page">requirements</a>, you can submit it to the gallery.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_before_you_submit"><a class="anchor" href="#_before_you_submit"></a>Before You Submit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Verify that:</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> Your repository is <strong>public</strong></p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Your preview site is live at <code><a href="https://{username}.github.io/{repo-name}/" class="bare">https://{username}.github.io/{repo-name}/</a></code></p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Your <code>preview.png</code> exists and is accessible</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Your theme demonstrates actual documentation content</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Test your screenshot URL:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">https://raw.githubusercontent.com/{username}/{repo}/main/preview.png</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_an_account"><a class="anchor" href="#_creating_an_account"></a>Creating an Account</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to the <a href="https://antora-themes.example.com">Antora Themes Gallery</a></p>
+</li>
+<li>
+<p>Click <strong>Sign up</strong> or <strong>Sign in</strong></p>
+</li>
+<li>
+<p>Choose your preferred method:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>GitHub</strong> - Recommended for theme developers</p>
+</li>
+<li>
+<p><strong>GitLab</strong> - If your theme is on GitLab</p>
+</li>
+<li>
+<p><strong>Google</strong> - General purpose</p>
+</li>
+<li>
+<p><strong>Email</strong> - For privacy-conscious users</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_submitting"><a class="anchor" href="#_submitting"></a>Submitting</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to the <strong>Submit</strong> page (<code>/submit</code>)</p>
+</li>
+<li>
+<p>Enter your GitHub repository URL:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">https://github.com/yourusername/my-antora-theme</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Click btn:[Validate Theme]</p>
+<div class="paragraph">
+<p>The system will verify:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Repository exists and is public</p>
+</li>
+<li>
+<p>Can fetch repository metadata</p>
+</li>
+<li>
+<p>Preview image is accessible</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Review the preview and click btn:[Submit Theme for Review]</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_review_process"><a class="anchor" href="#_review_process"></a>Review Process</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After submission, your theme enters the review queue:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Status</th>
+<th class="tableblock halign-left valign-top">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Pending</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Your theme is waiting for review</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Approved</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Your theme is visible in the public gallery</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rejected</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Your theme didn&#8217;t meet requirements (you&#8217;ll be notified why)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Review typically takes 1-3 business days.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_after_approval"><a class="anchor" href="#_after_approval"></a>After Approval</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Once approved, your theme will:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Appear in the gallery browse page</p>
+</li>
+<li>
+<p>Be searchable by name, description, and tags</p>
+</li>
+<li>
+<p>Show your GitHub star count (updated periodically)</p>
+</li>
+<li>
+<p>Link directly to your demo and repository</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_updating_your_theme"><a class="anchor" href="#_updating_your_theme"></a>Updating Your Theme</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You don&#8217;t need to resubmit when you update your theme:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Preview site</strong> - Automatically updates when you push to GitHub</p>
+</li>
+<li>
+<p><strong>Screenshot</strong> - Regenerated by your GitHub Action</p>
+</li>
+<li>
+<p><strong>Star count</strong> - Periodically fetched from GitHub API</p>
+</li>
+<li>
+<p><strong>Description</strong> - Pulled from your repository description</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To update theme metadata (name, tags), you may need to contact an administrator.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_removing_your_theme"><a class="anchor" href="#_removing_your_theme"></a>Removing Your Theme</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To remove your theme from the gallery:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Make your repository private, OR</p>
+</li>
+<li>
+<p>Contact an administrator</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_faq"><a class="anchor" href="#_faq"></a>FAQ</h2>
+<div class="sectionbody">
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em>Can I submit a theme hosted on GitLab?</em></p>
+<p>Currently, we only support GitHub-hosted themes. GitLab support is planned.</p>
+</li>
+<li>
+<p><em>How long does review take?</em></p>
+<p>Typically 1-3 business days. We review for spam and basic quality.</p>
+</li>
+<li>
+<p><em>Can I submit multiple themes?</em></p>
+<p>Yes! Each theme needs its own repository.</p>
+</li>
+<li>
+<p><em>My theme was rejected. What now?</em></p>
+<p>Check the rejection reason in your notification. Common issues:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Screenshot missing or wrong size</p>
+</li>
+<li>
+<p>Demo site not working</p>
+</li>
+<li>
+<p>Repository is private</p>
+</li>
+<li>
+<p>Not actually an Antora theme</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><em>How do I update my theme&#8217;s description?</em></p>
+<p>Update your GitHub repository description. The gallery syncs this periodically.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/site-dark-mode.js"></script>
+  </body>
+</html>
