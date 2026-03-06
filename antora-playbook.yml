@@ -1,3 +1,4 @@
+# Dev Center docs — local development (sibling repos, dev-centr only)
 site:
   title: Dev Center Docs (Local)
   start_page: home::index.adoc
@@ -8,22 +9,6 @@ content:
       start_path: docs
       worktrees: true
     - url: ../devcentr
-      branches: HEAD
-      start_path: docs
-      worktrees: true
-    - url: ../antora-dark-theme
-      branches: HEAD
-      start_path: docs
-      worktrees: true
-    - url: ../antora-demo-template
-      branches: HEAD
-      start_path: docs
-      worktrees: true
-    - url: ../antora-extensions-registry
-      branches: HEAD
-      start_path: docs
-      worktrees: true
-    - url: ../antora-themes-site
       branches: HEAD
       start_path: docs
       worktrees: true

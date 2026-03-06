@@ -1,3 +1,4 @@
+# Dev Center docs — CI/production (dev-centr repos only)
 site:
   title: Dev-Centr Docs
   url: https://docs.devcentr.org
@@ -10,18 +11,6 @@ content:
     - url: https://github.com/dev-centr/devcentr.git
       branches: HEAD
       start_path: docs
-    - url: https://github.com/asciidoc-supplemental/antora-dark-theme.git
-      branches: HEAD
-      start_path: docs
-    - url: https://github.com/asciidoc-supplemental/antora-demo-template.git
-      branches: HEAD
-      start_path: docs
-    - url: https://github.com/asciidoc-supplemental/antora-extensions-registry.git
-      branches: HEAD
-      start_path: docs
-    - url: https://github.com/asciidoc-supplemental/antora-themes-site.git
-      branches: HEAD
-      start_path: docs
     - url: https://github.com/dev-centr/templates.git
       branches: HEAD
       start_path: docs
@@ -30,10 +19,8 @@ content:
       start_path: docs
 ui:
   bundle:
-    url: https://github.com/asciidoc-supplemental/antora-dark-theme/releases/latest/download/ui-bundle.zip
+    url: https://github.com/antora-supplemental/antora-dark-theme/releases/latest/download/ui-bundle.zip
     snapshot: true
   supplemental_files: ./supplemental-ui
-
-
-
-
+output:
+  dir: ./build/site
