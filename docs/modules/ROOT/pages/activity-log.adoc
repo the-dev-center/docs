@@ -1,0 +1,21 @@
+= Activity Log
+:navtitle: Activity Log
+:description: Notable changes and updates across Dev-Centr documentation and projects.
+
+This page records significant documentation and project activity at an org level. New entries are added at the top. For per-repo release history, see each repository's tags and release notes.
+
+== 2025
+
+=== March
+
+* **Central Todo & Roadmap and Activity log** — Moved org-wide roadmap and activity log into the **docs** repository so they live in one place for the aggregated site (docs.devcentr.org). Added "Where documentation lives" to explain the doc structure. DevCentr repo keeps its own task-level Todo & Roadmap for app work.
+* **Secrets Manager documentation (DevCentr)** — Full module: overview, architecture, .env patterns, back-end providers (Bitwarden), SSH Manager spec, WSL and virtual environments, proxy-in-GUI guidance. Todo & Roadmap and Activity log added to DevCentr docs (and now mirrored/centralized here).
+
+=== Earlier
+
+* **Project vision and specs (DevCentr)** — UI specification and roadmap, environment navigator concept, component specs.
+* **Knowledge base and publishing (DevCentr)** — SSH keys, Git, workspace organization, Antora deployment, upstream contributions.
+* **Portal and tools (docs repo)** — Home portal linking DevCentr, Templates, MSI Generator; tool overviews for code-d, dprint, dlangui.
+
+---
+_Add new entries at the top of the current year/month. Use a short bold label and a one-line description._

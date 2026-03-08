@@ -5,6 +5,9 @@ on:
     branches:
       - main
   workflow_dispatch:
+  # Rebuild when a shared extension (e.g. UI bundle) is updated; see antora-deployment.adoc
+  repository_dispatch:
+    types: [extension-updated]
 
 permissions:
   contents: write
@@ -37,7 +40,7 @@ jobs:
         run: pnpm install
 
       - name: Build Antora site
-        run: pnpm exec antora --fetch antora-playbook.online.yml
+        run: pnpm exec antora --fetch antora-playbook.yml
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'

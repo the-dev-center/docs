@@ -1,4 +1,4 @@
-﻿# Antora Dark Mode Analysis
+# Antora Dark Mode Analysis
 
 ## Summary
 
@@ -30,7 +30,7 @@ This fix **does not change the Antora default UI bundle** itself. It only affect
 
 ## Files Involved
 
-- `antora-playbook.online.yml`
+- `antora-playbook.yml`
 - `antora-playbook.testing.yml`
 - `supplemental-ui/partials/head-meta.hbs`
 - `supplemental-ui/partials/footer-scripts.hbs`

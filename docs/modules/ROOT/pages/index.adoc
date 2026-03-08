@@ -18,7 +18,7 @@ xref:DevCentr:ROOT:index.adoc[Explore Dev Center Docs]
 [.card]
 === 📄 Docs Playbook
 Configuration and playbook for this documentation site.
-Antora setup and local development guides.
+Org-wide xref:todo-roadmap.adoc[Todo & Roadmap] and xref:activity-log.adoc[Activity log]. xref:where-docs-live.adoc[Where documentation lives].
 
 xref:home:ROOT:index.adoc[You are here]
 

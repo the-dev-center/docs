@@ -1,4 +1,6 @@
-﻿extends: ./antora-playbook.online.yml
+# Local dev playbook — copy to antora-playbook-local.yml (gitignored) and run: pnpm build
+# Extends the production playbook with local sibling repos.
+extends: ./antora-playbook.yml
 site:
   title: Dev Center Docs (Local)
 content:

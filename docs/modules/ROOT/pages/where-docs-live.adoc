@@ -1,0 +1,12 @@
+= Where Documentation Lives
+:navtitle: Where Documentation Lives
+:description: How the Dev-Centr documentation is structured across repositories and the built site.
+
+This site (docs.devcentr.org) is built by the link:https://github.com/dev-centr/docs[docs] repository, which aggregates content from several repositories:
+
+* **docs** (this repo) — Portal home page, this "Where documentation lives" page, and org-wide xref:todo-roadmap.adoc[Todo & Roadmap] and xref:activity-log.adoc[Activity log]. Also tool overviews (code-d, dprint, dlangui, MSI Generator).
+* **devcentr** — The main Dev Center application docs: project vision, knowledge base, component specifications, Secrets Manager, publishing, upstream contributions. The app repo can also be built standalone (single-repo build) for development.
+* **templates** — Standardized project templates and usage guides.
+* **msi-installer-generator** — MSI/MSIX generator documentation.
+
+Org-wide roadmap and activity log live here in the **docs** repo so they stay in one place across all projects. Repo-specific task lists (e.g. devcentr's root `TODO.adoc`) remain in each repository for day-to-day work; the central xref:todo-roadmap.adoc[Todo & Roadmap] summarizes themes and the xref:activity-log.adoc[Activity log] records notable updates.

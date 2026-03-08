@@ -1,4 +1,7 @@
 * xref:index.adoc[Home]
+* xref:where-docs-live.adoc[Where Documentation Lives]
+* xref:todo-roadmap.adoc[Todo & Roadmap]
+* xref:activity-log.adoc[Activity Log]
 * xref:tools/index.adoc[Tools]
 ** xref:tools/code-d.adoc[code-d]
 ** xref:tools/dprint.adoc[dprint]
