@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Automated Releases with GitHub Actions :: Dev-Centr Docs</title>
-    <link rel="canonical" href="https://docs.devcentr.org/DevCentr/publishing/automated-releases.html">
+    <title>SDL (SDLang) Preference for Settings and Configuration :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/DevCentr/specifications/sdl.html">
+    <meta name="description" content="Prefer SDL over JSON and JSON5 for human-edited settings and config files. Official references and comparison.">
     <meta name="generator" content="Antora 3.1.14">
     <link rel="stylesheet" href="../../_/css/site.css">
 <link rel="stylesheet" href="../../_/css/site-extra.css">
@@ -72,6 +73,9 @@
     <a class="nav-link" href="../index.html">Dev Center</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../docs-organization.html">Doc Organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../project-vision.html">Project Vision</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -84,13 +88,13 @@
     <a class="nav-link" href="../knowledge-base/index.html">Knowledge Base</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/index.html">Specifications</a>
+    <a class="nav-link" href="index.html">Specifications</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../secrets-manager/index.html">Secrets Manager</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="index.html">Software Publishing</a>
+    <a class="nav-link" href="../publishing/index.html">Software Publishing</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../upstream-contributions/index.html">Upstream Contributions</a>
@@ -142,10 +146,13 @@
     <a class="nav-link" href="../knowledge-base/how-to/git-recovery.html">Git Recovery</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../knowledge-base/how-to/kvm-windows-automation.html">Windows Automation via KVM</a>
+    <a class="nav-link" href="../knowledge-base/how-to/github-pages-custom-domain.html">GitHub Pages Custom Domain</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../knowledge-base/how-to/github-pages-custom-domain.html">GitHub Pages Custom Domain</a>
+    <a class="nav-link" href="../knowledge-base/how-to/git-release-workflow.html">Git Release Workflow</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/how-to/automated-releases.html">Automated Releases</a>
   </li>
 </ul>
   </li>
@@ -166,6 +173,9 @@
     <a class="nav-link" href="../knowledge-base/reference/git-management.html">Git Management</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/reference/github-actions-templates-vs-marketplace.html">Actions Templates vs Marketplace</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../knowledge-base/reference/git-installation.html">Git Installation</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -173,6 +183,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../knowledge-base/reference/asciidoc-tools.html">AsciiDoc Tooling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/reference/package-registries.html">Package Registries</a>
   </li>
 </ul>
   </li>
@@ -242,40 +255,40 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/index.html">Specifications</a>
+    <a class="nav-link" href="index.html">Specifications</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/dependency-modeler.html">Dependency Modeler</a>
+    <a class="nav-link" href="components/dependency-modeler.html">Dependency Modeler</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/project-recognizer.html">Project Recognizer</a>
+    <a class="nav-link" href="components/project-recognizer.html">Project Recognizer</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/repository-provider-registry.html">Repository Provider Registry</a>
+    <a class="nav-link" href="components/repository-provider-registry.html">Repository Provider Registry</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/text-editor-link-system.html">Text Editor Link System</a>
+    <a class="nav-link" href="components/text-editor-link-system.html">Text Editor Link System</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/code-execution-recording.html">Code Execution Recording</a>
+    <a class="nav-link" href="components/code-execution-recording.html">Code Execution Recording</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/git-repository-manager.html">Git Repository Manager</a>
+    <a class="nav-link" href="components/git-repository-manager.html">Git Repository Manager</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/workspace-template-manager.html">Workspace Template Manager</a>
+    <a class="nav-link" href="components/workspace-template-manager.html">Workspace Template Manager</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/secrets-manager.html">Secrets Manager</a>
+    <a class="nav-link" href="components/secrets-manager.html">Secrets Manager</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/ssh-manager.html">SSH Manager</a>
+    <a class="nav-link" href="components/ssh-manager.html">SSH Manager</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/features/opening-web-content-from-docs.html">Opening Web Content from Docs</a>
+    <a class="nav-link" href="features/opening-web-content-from-docs.html">Opening Web Content from Docs</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/features/text-editor-separate-process.html">Text Editor Separate Process</a>
+    <a class="nav-link" href="features/text-editor-separate-process.html">Text Editor Separate Process</a>
   </li>
 </ul>
   </li>
@@ -357,19 +370,7 @@
     <span class="nav-text">Software Publishing</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="index.html">Publishing</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="git-release-workflow.html">Git Release Workflow</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="automated-releases.html">Automated Releases</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="package-registries.html">Package Registries</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="antora-deployment.html">Antora Deployment</a>
+    <a class="nav-link" href="../publishing/index.html">Publishing</a>
   </li>
 </ul>
   </li>
@@ -428,125 +429,168 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">DevCentr</a></li>
-    <li>Software Publishing</li>
-    <li><a href="automated-releases.html">Automated Releases</a></li>
+    <li><a href="sdl.html">SDL (SDLang) Preference for Settings and Configuration</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/dev-centr/devcentr/edit/main/docs/modules/publishing/pages/automated-releases.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/dev-centr/devcentr/edit/main/docs/modules/specifications/pages/sdl.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Automated Releases with GitHub Actions</h1>
+<h1 class="page">SDL (SDLang) Preference for Settings and Configuration</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>GitHub can automatically build your releases and attach binaries. This saves you from manually compiling and uploading files.</p>
+<p>Developers in the Dev-Centr ecosystem should <strong>favor SDL</strong> (SDLang — Simple Declarative Language) over JSON and JSON5 for settings files and other human-edited configuration. This page explains why, compares formats, and points to the official language and tools.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_is_it_expensive"><a class="anchor" href="#_is_it_expensive"></a>Is it Expensive?</h2>
+<h2 id="_what_is_sdl_disambiguation"><a class="anchor" href="#_what_is_sdl_disambiguation"></a>What is SDL? (Disambiguation)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>No, it is usually free.</strong></p>
+<p><strong>SDL</strong> in this context means <strong>SDLang</strong> (Simple Declarative Language): a compact, human-readable data format for config files, property files, and serialization. It is <strong>not</strong> any of the following:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Public Repositories</strong>: GitHub Actions is <strong>completely free</strong>.</p>
+<p><strong>libSDL / SDL2 / SDL3</strong> — Simple Directmedia Layer (graphics/gaming library from <a href="https://libsdl.org">libsdl.org</a>). Web search for "SDL" often returns these first.</p>
 </li>
 <li>
-<p><strong>Private Repositories</strong>: You get 2,000 free minutes per month (Pro plan gets 3,000+).</p>
+<p><strong>SDL_Config</strong> (C++ .ini/.cfg libraries) — Different purpose; not the SDLang language.</p>
 </li>
 <li>
-<p>Building a D project takes ~2-5 minutes.</p>
+<p><strong>GraphQL SDL</strong> — Schema Definition Language for GraphQL; not a general config format.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When searching for the <strong>config format</strong>, use <strong>"SDLang"</strong> or <strong>"SDLang config"</strong> or <strong>"sdlang.org"</strong> to avoid the gaming/library results.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_favor_sdl_even_over_json5"><a class="anchor" href="#_why_favor_sdl_even_over_json5"></a>Why Favor SDL (Even Over JSON5)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>SDL was designed as a human-friendly alternative to XML and property files. For settings and config that developers edit by hand, it is a better fit than JSON or JSON5.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Comments out of the box</strong> — Line comments (<code>//</code>, <code>#</code>, <code>--</code>) and block comments (<code>/* */</code>) with no need for a separate "JSON with comments" dialect.</p>
 </li>
 <li>
-<p>You could build hundreds of releases per month without paying a cent.</p>
+<p><strong>Less syntactic noise</strong> — No required commas between elements; no mandatory quotes for keys; structure is clear without repeating tag names.</p>
+</li>
+<li>
+<p><strong>Native types</strong> — Booleans (<code>true</code>/<code>false</code>, <code>on</code>/<code>off</code>), numbers (integer, float, decimal), dates/times, durations, and binary (base64) without encoding them as strings.</p>
+</li>
+<li>
+<p><strong>Readable nesting</strong> — Tags and braces read like a lightweight document; easier to scan than dense JSON.</p>
+</li>
+<li>
+<p><strong>Trailing structure</strong> — Optional semicolons; newline or <code>}</code> ends a tag, so fewer easy-to-miss punctuation errors.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>JSON5 improves on JSON (comments, trailing commas, unquoted keys) but still carries JSON’s brace-and-comma style. SDL avoids that style entirely and stays concise and type-aware.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_comparison"><a class="anchor" href="#_comparison"></a>Comparison</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>| Feature | JSON | JSON5 | SDL (SDLang)
+| Comments | No | Yes (<code>//</code>, <code>/* <strong>/</code>) | Yes (<code>//</code>, <code>#</code>, <code>--</code>, <code>/</strong> */</code>)
+| Trailing commas | No | Yes | N/A (not used)
+| Unquoted keys | No | Yes | Yes (tag names)
+| Native date/time | No | No | Yes
+| Native booleans | No (literals) | Same | Yes (<code>on</code>/<code>off</code> etc.)
+| Verbosity | High | Medium | Low
+| Learning curve | Low | Low | Low
+| Ecosystem/tooling | Very large | Moderate | Smaller (but solid for D, Java, .NET, Ruby, C, etc.)</p>
+</div>
+<div class="paragraph">
+<p><strong>Recommendation:</strong> Prefer <strong><code>.sdl</code></strong> for new settings and config files when you control the parser (e.g. Dev Center recognizer profiles, app config, per-repo settings). Use <strong>JSON5</strong> (or JSON) when a tool or API strictly requires it (e.g. <code>package.json</code>, VS Code <code>settings.json</code>, dprint/biome config).</p>
+</div>
+<div class="paragraph">
+<p>Per-repository Devcentr settings live in <strong><code>.devcentr.sdl</code></strong> at the root of each repo; see <a href="per-repo-settings.html" class="xref page">Per-Repository Devcentr Settings</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_file_extensions_and_conventions"><a class="anchor" href="#_file_extensions_and_conventions"></a>File Extensions and Conventions</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Use <strong><code>.sdl</code></strong> for SDLang configuration and settings files.</p>
+</li>
+<li>
+<p>Files must be UTF-8. No <code>\uXXXX</code> escapes; use UTF-8 directly.</p>
+</li>
+<li>
+<p>Indentation is by convention; the language does not require specific spaces/tabs.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_automate_release_builds"><a class="anchor" href="#_how_to_automate_release_builds"></a>How to Automate Release Builds</h2>
+<h2 id="_implementation_in_dev_center_d"><a class="anchor" href="#_implementation_in_dev_center_d"></a>Implementation in Dev Center (D)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You need a workflow file in <code>.github/workflows/</code>.</p>
+<p>The Dev Center app uses the <strong>sdlang-d</strong> library (SDLang-D) for parsing <code>.sdl</code> config.</p>
 </div>
-<div class="paragraph">
-<p>This workflow will:
-1.  Trigger when you push a tag starting with <code>v</code> (e.g., <code>v0.1.0</code>).
-2.  Spin up a runner (Linux, Windows, macOS).
-3.  Install the D compiler (LDC recommended for release builds).
-4.  Build your project.
-5.  Upload the binary to the GitHub Release page automatically.</p>
-</div>
-<div class="sect2">
-<h3 id="_example_workflow_githubworkflowsrelease_yml"><a class="anchor" href="#_example_workflow_githubworkflowsrelease_yml"></a>Example Workflow (<code>.github/workflows/release.yml</code>)</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">name: Release
-
-on:
-  push:
-    tags:
-      - 'v*' # Trigger on tags like v1.0.0
-
-permissions:
-  contents: write # Required to create releases
-
-jobs:
-  build:
-    name: Build ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        include:
-          - os: ubuntu-latest
-            artifact_name: msi-generator
-            asset_name: msi-generator-linux-amd64
-          - os: windows-latest
-            artifact_name: msi-generator.exe
-            asset_name: msi-generator-windows-amd64.exe
-          - os: macos-latest
-            artifact_name: msi-generator
-            asset_name: msi-generator-macos-amd64
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Install D compiler
-        uses: dlang-community/setup-dlang@v1
-        with:
-          compiler: ldc-latest
-
-      - name: Build
-        run: dub build --build=release --config=prod # Use your prod config!
-
-      - name: Upload binaries to release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          files: ${{ matrix.artifact_name }}
-          name: ${{ github.ref_name }} # e.g. v0.1.0
-          body: "Automated release build."
-          draft: false
-          prerelease: false</code></pre>
-</div>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Recognizer profiles:</strong> <code>app/src/modules/project-recognizer/profiles/</code> — <code>.sdl</code>, <code>.json5</code>, or <code>.json</code>; one format per logical profile; prefer <code>.sdl</code>.</p>
+</li>
+<li>
+<p><strong>Per-repo settings:</strong> <code>.devcentr.sdl</code> at repository root — see <a href="per-repo-settings.html" class="xref page">Per-Repository Devcentr Settings</a>. Structure and keys are reserved for future use.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_key_takeaway"><a class="anchor" href="#_key_takeaway"></a>Key Takeaway</h2>
+<h2 id="_official_references_and_specs"><a class="anchor" href="#_official_references_and_specs"></a>Official References and Specs</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>By adding this file, you turn your "Source Ready" project into a "Binary Ready" project automatically every time you push a tag.</p>
+<p>Use these to learn the language and to avoid confusion with libSDL/gaming hits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Official site:</strong> <a href="https://sdlang.org/">SDLang — Simple Declarative Language</a> — syntax overview, data types, comment styles, implementations list.</p>
+</li>
+<li>
+<p><strong>Language guide (spec-style):</strong> <a href="https://github.com/dlang-community/SDLang-D/wiki/Language-Guide">SDLang-D Wiki — Language Guide</a> — tags, literals, strings, comments, file encoding; the authoritative language description.</p>
+</li>
+<li>
+<p><strong>Original reference (mirror):</strong> <a href="http://semitwist.com/sdl-mirror/Language+Guide.html">SDL Language Guide mirror</a> — original SDL documentation.</p>
+</li>
+<li>
+<p><strong>D implementation (used in Dev Center):</strong> <a href="https://code.dlang.org/packages/sdlang-d">sdlang-d on DUB</a> — D library; HOWTO and API links in the package description.</p>
+</li>
+<li>
+<p><strong>Source repos:</strong> <a href="https://github.com/dlang-community/SDLang-D">SDLang-D (D)</a>, <a href="https://github.com/ikayzo/SDL">SDL (Java)</a>, <a href="https://github.com/ikayzo/SDL.rb">SDL.rb (Ruby)</a>, <a href="https://github.com/ellipticbit/SDLangNET">SDLangNET (.NET)</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_relation_to_json5"><a class="anchor" href="#_relation_to_json5"></a>Relation to JSON5</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When a tool or platform does not support SDL (e.g. npm, VS Code, many CI configs), use JSON5 over plain JSON so that comments and trailing commas are allowed. See <a href="json5.html" class="xref page">JSON5 Endorsement</a> for that policy. For Dev-Centr-owned config (e.g. recognizer profiles), we use SDL where possible and document both formats in this specification set.</p>
 </div>
 </div>
 </div>

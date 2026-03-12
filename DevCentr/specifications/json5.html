@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>JSON5 Endorsement :: Dev-Centr Docs</title>
     <link rel="canonical" href="https://docs.devcentr.org/DevCentr/specifications/json5.html">
-    <meta name="description" content="Formal endorsement and specification for using JSON5 in Dev-Centr projects.">
+    <meta name="description" content="Use JSON5 when tools require JSON; prefer SDL for human-edited config when possible.">
     <meta name="generator" content="Antora 3.1.14">
     <link rel="stylesheet" href="../../_/css/site.css">
 <link rel="stylesheet" href="../../_/css/site-extra.css">
@@ -71,6 +71,9 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../index.html">Dev Center</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../docs-organization.html">Doc Organization</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../project-vision.html">Project Vision</a>
@@ -143,10 +146,13 @@
     <a class="nav-link" href="../knowledge-base/how-to/git-recovery.html">Git Recovery</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../knowledge-base/how-to/kvm-windows-automation.html">Windows Automation via KVM</a>
+    <a class="nav-link" href="../knowledge-base/how-to/github-pages-custom-domain.html">GitHub Pages Custom Domain</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../knowledge-base/how-to/github-pages-custom-domain.html">GitHub Pages Custom Domain</a>
+    <a class="nav-link" href="../knowledge-base/how-to/git-release-workflow.html">Git Release Workflow</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/how-to/automated-releases.html">Automated Releases</a>
   </li>
 </ul>
   </li>
@@ -167,6 +173,9 @@
     <a class="nav-link" href="../knowledge-base/reference/git-management.html">Git Management</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/reference/github-actions-templates-vs-marketplace.html">Actions Templates vs Marketplace</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../knowledge-base/reference/git-installation.html">Git Installation</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -174,6 +183,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../knowledge-base/reference/asciidoc-tools.html">AsciiDoc Tooling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/reference/package-registries.html">Package Registries</a>
   </li>
 </ul>
   </li>
@@ -360,18 +372,6 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../publishing/index.html">Publishing</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../publishing/git-release-workflow.html">Git Release Workflow</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../publishing/automated-releases.html">Automated Releases</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../publishing/package-registries.html">Package Registries</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../publishing/antora-deployment.html">Antora Deployment</a>
-  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="0">
@@ -444,6 +444,9 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>JSON5 is a superset of JSON that expands its syntax to include some features from ECMAScript 5.1. It is designed to be easier for humans to write and maintain by hand.</p>
+</div>
+<div class="paragraph">
+<p>When you control the parser (e.g. Dev Center app config, recognizer profiles), prefer <a href="sdl.html" class="xref page">SDL (SDLang)</a> over JSON5. Use JSON5 when a tool or API strictly requires JSON (e.g. <code>package.json</code>, VS Code <code>settings.json</code>, dprint/biome config).</p>
 </div>
 </div>
 </div>
@@ -538,6 +541,18 @@
 </li>
 <li>
 <p>[JSON5 Specification](<a href="https://spec.json5.org/" class="bare">https://spec.json5.org/</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_see_also"><a class="anchor" href="#_see_also"></a>See also</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="sdl.html" class="xref page">SDL (SDLang) preference</a> — Prefer SDL for settings and config when the parser supports it.</p>
 </li>
 </ul>
 </div>

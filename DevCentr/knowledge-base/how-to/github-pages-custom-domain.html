@@ -73,6 +73,9 @@
     <a class="nav-link" href="../../index.html">Dev Center</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../docs-organization.html">Doc Organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../project-vision.html">Project Vision</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -142,11 +145,14 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="git-recovery.html">Git Recovery</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="kvm-windows-automation.html">Windows Automation via KVM</a>
-  </li>
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="github-pages-custom-domain.html">GitHub Pages Custom Domain</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="git-release-workflow.html">Git Release Workflow</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="automated-releases.html">Automated Releases</a>
   </li>
 </ul>
   </li>
@@ -167,6 +173,9 @@
     <a class="nav-link" href="../reference/git-management.html">Git Management</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../reference/github-actions-templates-vs-marketplace.html">Actions Templates vs Marketplace</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../reference/git-installation.html">Git Installation</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -174,6 +183,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../reference/asciidoc-tools.html">AsciiDoc Tooling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../reference/package-registries.html">Package Registries</a>
   </li>
 </ul>
   </li>
@@ -360,18 +372,6 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../publishing/index.html">Publishing</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../publishing/git-release-workflow.html">Git Release Workflow</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../publishing/automated-releases.html">Automated Releases</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../publishing/package-registries.html">Package Registries</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../publishing/antora-deployment.html">Antora Deployment</a>
-  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="0">
@@ -513,7 +513,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_order_of_work_do_this_first_then_that"><a class="anchor" href="#_order_of_work_do_this_first_then_that"></a>Order of work (do this first, then that)</h2>
+<h2 id="_order_of_work"><a class="anchor" href="#_order_of_work"></a>Order of work</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -557,6 +557,9 @@
 </div>
 <div class="paragraph">
 <p>If you publish from a branch, GitHub will add a file called <code>CNAME</code> to your repo. If you build the site with GitHub Actions, you do not need that file.</p>
+</div>
+<div class="paragraph">
+<p><strong>If you deploy with GitHub Actions</strong> (e.g. <code>upload-pages-artifact</code> + <code>deploy-pages</code>): In <strong>Settings → Pages</strong>, under "Build and deployment", set <strong>Source</strong> to <strong>GitHub Actions</strong>. If Source is "Deploy from a branch", GitHub will ignore the Actions deployment and your custom domain may not serve the built site.</p>
 </div>
 <div class="paragraph">
 <p>After the domain is set, you can turn on <strong>Enforce HTTPS</strong> when it appears (sometimes it takes a while). That makes your site load over a secure connection.</p>
@@ -609,6 +612,9 @@
 </li>
 <li>
 <p><strong>TTL:</strong> Default is fine (e.g. 3600 or "Auto").</p>
+<div class="paragraph">
+<p>If you use <strong>Cloudflare:</strong> each record has a proxy toggle (cloud icon). Use <strong>grey cloud (DNS only)</strong> for these records. Orange cloud (proxied) can leave "Enforce HTTPS" unavailable or cause certificate errors; grey avoids that. If you later try orange, set SSL/TLS to Full or Full (strict) in Cloudflare.</p>
+</div>
 </li>
 </ul>
 </div>
@@ -628,6 +634,9 @@
 </li>
 <li>
 <p><strong>Value / target:</strong> <code>yourusername.github.io</code> or <code>yourorg.github.io</code> (user or org site). No repo name. No <code>https://</code>.</p>
+<div class="paragraph">
+<p>If you use <strong>Cloudflare:</strong> set this record to <strong>grey cloud (DNS only)</strong>. Proxied (orange) can break Enforce HTTPS or cause certificate issues.</p>
+</div>
 </li>
 </ul>
 </div>
@@ -688,6 +697,9 @@
 </li>
 <li>
 <p>Do <strong>not</strong> put the repository name in the value. Do <strong>not</strong> put <code>https://</code>. Just the <code>.github.io</code> address.</p>
+<div class="paragraph">
+<p>If you use <strong>Cloudflare:</strong> set this CNAME to <strong>grey cloud (DNS only)</strong>. Orange cloud (proxied) often keeps "Enforce HTTPS" greyed out or causes certificate errors.</p>
+</div>
 </li>
 </ol>
 </div>
@@ -699,10 +711,10 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Do "Step 2a" for your main domain (four A records or one ALIAS/ANAME).</p>
+<p>Do "Step 2a" for your main domain (four A records or one ALIAS/ANAME). If you use Cloudflare, use <strong>grey cloud (DNS only)</strong> for those records.</p>
 </li>
 <li>
-<p>Do "Step 2b" for <code>www</code> (one CNAME pointing to <code>yourusername.github.io</code> or <code>yourorg.github.io</code>).</p>
+<p>Do "Step 2b" for <code>www</code> (one CNAME pointing to <code>yourusername.github.io</code> or <code>yourorg.github.io</code>). Same Cloudflare rule: grey cloud for the CNAME.</p>
 </li>
 <li>
 <p>In GitHub (Settings → Pages → Custom domain), type <strong>one</strong> of the two (either <code>example.com</code> or <code>www.example.com</code>) and save. GitHub will then redirect the other one to the one you chose. For example, if you set <code>example.com</code> in GitHub, then <code>www.example.com</code> will redirect to <code>example.com</code>.</p>
@@ -768,6 +780,30 @@
 <p>If you <strong>turn off GitHub Pages</strong> but leave the domain in DNS pointing at GitHub, someone else could use your domain. If you disable the site, remove or change the DNS records too.</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting_works_on_github_io_but_not_my_domain_or_github_actions_deploy_but_domain_is_wrong"><a class="anchor" href="#_troubleshooting_works_on_github_io_but_not_my_domain_or_github_actions_deploy_but_domain_is_wrong"></a>Troubleshooting: “Works on .github.io but not my domain” or “GitHub Actions deploy but domain is wrong”</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If your workflow uses <code>actions/upload-pages-artifact</code> and <code>actions/deploy-pages</code>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the repo on GitHub go to <strong>Settings → Pages</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Build and deployment</strong>, check <strong>Source</strong>. It must say <strong>GitHub Actions</strong>. If it says <strong>Deploy from a branch</strong>, GitHub is not using your Actions workflow for this site; change it to <strong>GitHub Actions</strong> and save.</p>
+</li>
+<li>
+<p>Under <strong>Custom domain</strong>, make sure your domain (e.g. <code>devcentr.org</code> or <code>www.devcentr.org</code>) is set and saved. GitHub does not read the custom domain from a CNAME file when you use GitHub Actions.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If the domain still fails, run <code>Resolve-DnsName yourdomain.com -Type A</code> (PowerShell) or <code>dig yourdomain.com +short</code> (Mac/Linux). For an apex domain you should see the four GitHub Pages IPs (see "Step 2a" above). For <code>www</code> you should see a CNAME to <code>yourorg.github.io</code>.</p>
 </div>
 </div>
 </div>

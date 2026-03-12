@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Package Registries: Where to Publish? :: Dev-Centr Docs</title>
-    <link rel="canonical" href="https://docs.devcentr.org/DevCentr/publishing/package-registries.html">
+    <title>Per-Repository Devcentr Settings :: Dev-Centr Docs</title>
+    <link rel="canonical" href="https://docs.devcentr.org/DevCentr/specifications/per-repo-settings.html">
+    <meta name="description" content="Convention for storing Devcentr-specific settings per repository in an SDL file at repo root.">
     <meta name="generator" content="Antora 3.1.14">
     <link rel="stylesheet" href="../../_/css/site.css">
 <link rel="stylesheet" href="../../_/css/site-extra.css">
@@ -72,6 +73,9 @@
     <a class="nav-link" href="../index.html">Dev Center</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../docs-organization.html">Doc Organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../project-vision.html">Project Vision</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -84,13 +88,13 @@
     <a class="nav-link" href="../knowledge-base/index.html">Knowledge Base</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/index.html">Specifications</a>
+    <a class="nav-link" href="index.html">Specifications</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../secrets-manager/index.html">Secrets Manager</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="index.html">Software Publishing</a>
+    <a class="nav-link" href="../publishing/index.html">Software Publishing</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../upstream-contributions/index.html">Upstream Contributions</a>
@@ -142,10 +146,13 @@
     <a class="nav-link" href="../knowledge-base/how-to/git-recovery.html">Git Recovery</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../knowledge-base/how-to/kvm-windows-automation.html">Windows Automation via KVM</a>
+    <a class="nav-link" href="../knowledge-base/how-to/github-pages-custom-domain.html">GitHub Pages Custom Domain</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../knowledge-base/how-to/github-pages-custom-domain.html">GitHub Pages Custom Domain</a>
+    <a class="nav-link" href="../knowledge-base/how-to/git-release-workflow.html">Git Release Workflow</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/how-to/automated-releases.html">Automated Releases</a>
   </li>
 </ul>
   </li>
@@ -166,6 +173,9 @@
     <a class="nav-link" href="../knowledge-base/reference/git-management.html">Git Management</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/reference/github-actions-templates-vs-marketplace.html">Actions Templates vs Marketplace</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../knowledge-base/reference/git-installation.html">Git Installation</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -173,6 +183,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../knowledge-base/reference/asciidoc-tools.html">AsciiDoc Tooling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/reference/package-registries.html">Package Registries</a>
   </li>
 </ul>
   </li>
@@ -242,40 +255,40 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/index.html">Specifications</a>
+    <a class="nav-link" href="index.html">Specifications</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/dependency-modeler.html">Dependency Modeler</a>
+    <a class="nav-link" href="components/dependency-modeler.html">Dependency Modeler</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/project-recognizer.html">Project Recognizer</a>
+    <a class="nav-link" href="components/project-recognizer.html">Project Recognizer</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/repository-provider-registry.html">Repository Provider Registry</a>
+    <a class="nav-link" href="components/repository-provider-registry.html">Repository Provider Registry</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/text-editor-link-system.html">Text Editor Link System</a>
+    <a class="nav-link" href="components/text-editor-link-system.html">Text Editor Link System</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/code-execution-recording.html">Code Execution Recording</a>
+    <a class="nav-link" href="components/code-execution-recording.html">Code Execution Recording</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/git-repository-manager.html">Git Repository Manager</a>
+    <a class="nav-link" href="components/git-repository-manager.html">Git Repository Manager</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/workspace-template-manager.html">Workspace Template Manager</a>
+    <a class="nav-link" href="components/workspace-template-manager.html">Workspace Template Manager</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/secrets-manager.html">Secrets Manager</a>
+    <a class="nav-link" href="components/secrets-manager.html">Secrets Manager</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/components/ssh-manager.html">SSH Manager</a>
+    <a class="nav-link" href="components/ssh-manager.html">SSH Manager</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/features/opening-web-content-from-docs.html">Opening Web Content from Docs</a>
+    <a class="nav-link" href="features/opening-web-content-from-docs.html">Opening Web Content from Docs</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../specifications/features/text-editor-separate-process.html">Text Editor Separate Process</a>
+    <a class="nav-link" href="features/text-editor-separate-process.html">Text Editor Separate Process</a>
   </li>
 </ul>
   </li>
@@ -357,19 +370,7 @@
     <span class="nav-text">Software Publishing</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="index.html">Publishing</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="git-release-workflow.html">Git Release Workflow</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="automated-releases.html">Automated Releases</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="package-registries.html">Package Registries</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="antora-deployment.html">Antora Deployment</a>
+    <a class="nav-link" href="../publishing/index.html">Publishing</a>
   </li>
 </ul>
   </li>
@@ -428,110 +429,116 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">DevCentr</a></li>
-    <li>Software Publishing</li>
-    <li><a href="package-registries.html">Package Registries</a></li>
+    <li><a href="per-repo-settings.html">Per-Repository Devcentr Settings</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/dev-centr/devcentr/edit/main/docs/modules/publishing/pages/package-registries.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/dev-centr/devcentr/edit/main/docs/modules/specifications/pages/per-repo-settings.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Package Registries: Where to Publish?</h1>
+<h1 class="page">Per-Repository Devcentr Settings</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Once you have a release, where should you publish it? The answer depends on your language and target audience.</p>
+<p>Per-repository settings for Devcentr are stored in a single SDL file at the root of each repository. This gives each repo a place for Devcentr-specific configuration that can be versioned and shared with the team.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_the_github_packages_misconception"><a class="anchor" href="#_the_github_packages_misconception"></a>The "GitHub Packages" Misconception</h2>
+<h2 id="_file_name_and_location"><a class="anchor" href="#_file_name_and_location"></a>File name and location</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>GitHub Packages supports specific ecosystems: <strong>npm, NuGet, Maven, Gradle, RubyGems, and Docker</strong>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>File name:</strong> <code>.devcentr.sdl</code></p>
+</li>
+<li>
+<p><strong>Location:</strong> Repository root (same level as <code>.git</code>, <code>package.json</code>, or other root config files).</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p><strong>It does not verify "generic" software.</strong></p>
-</div>
-<div class="paragraph">
-<p>For a D language project like <code>msi-generator</code>:
-*   <strong>Is it advisable to publish to GitHub Packages (npm/NuGet)?</strong>
-    *   <strong>No.</strong> It would require wrapping your native binary in a NodeJS or .NET generic wrapper. This adds complexity for no benefit unless your primary users are strictly JS/.NET developers.
-*   <strong>Is there an exception?</strong>
-    *   <strong>Docker (ghcr.io)</strong>: Publishing a container image to GitHub Container Registry is excellent.
-    *   <strong>Why?</strong> It makes your tool "language agnostic". A Python, Rust, or Java project can use your tool in their detailed CI pipeline without installing a D compiler or dealing with system dependencies.
-    *   <strong>Example</strong>:
-        <code>docker run --rm -v $(pwd):/src ghcr.io/devcentr/msi-generator:latest</code></p>
+<p>The leading dot keeps the file visible in file explorers that show dotfiles and follows common config-file convention (e.g. <code>.editorconfig</code>, <code>.gitignore</code>).</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_recommended_registries_for_msi_generator"><a class="anchor" href="#_recommended_registries_for_msi_generator"></a>Recommended Registries for <code>msi-generator</code></h2>
+<h2 id="_format"><a class="anchor" href="#_format"></a>Format</h2>
 <div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 33.3333%;">
-<col style="width: 50.0001%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Registry</th>
-<th class="tableblock halign-left valign-top">Purpose</th>
-<th class="tableblock halign-left valign-top">Verdict</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>code.dlang.org</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The official D package registry.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Essential. Do this first.</strong> Enables <code>dub fetch msi-generator</code>.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Winget</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Windows Package Manager.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Highly Recommended.</strong> Best way for Windows users to install CLI tools.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Chocolatey</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Legacy Windows Package Manager.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Optional.</strong> Good if you have enterprise users on older systems.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Homebrew</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">macOS Package Manager.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Recommended</strong> if you support macOS users.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>GitHub Releases</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Raw binaries.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Essential.</strong> This is your source of truth. All other managers (Winget, Brew) just point to these URLs.</p></td>
-</tr>
-</tbody>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Format:</strong> SDLang (SDL). See <a href="sdl.html" class="xref page">SDL (SDLang) preference</a> for rationale and syntax.</p>
+</li>
+<li>
+<p><strong>Encoding:</strong> UTF-8.</p>
+</li>
+<li>
+<p><strong>Extension:</strong> <code>.sdl</code>.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<h2 id="_purpose_and_scope"><a class="anchor" href="#_purpose_and_scope"></a>Purpose and scope</h2>
 <div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
+<div class="paragraph">
+<p>The file is intended for settings that:</p>
+</div>
+<div class="ulist">
+<ul>
 <li>
-<p><strong>Binaries</strong>: Use GitHub Releases (Done).</p>
+<p>Apply to this repository only (not global user settings).</p>
 </li>
 <li>
-<p><strong>Library</strong>: Use code.dlang.org (Do this next).</p>
+<p>Are useful to commit so other developers and tools get the same behavior (e.g. which templates to use, which modules to enable for this repo).</p>
 </li>
 <li>
-<p><strong>Containers</strong>: Use GitHub Packages (Container Registry) if you need CI portability.</p>
+<p>Are consumed by Devcentr or by tooling that follows this convention.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>User-specific or machine-specific data (e.g. paths, credentials) belong in user config (e.g. <code>%USERPROFILE%\Dev Center</code>) or environment, not in <code>.devcentr.sdl</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_content_future"><a class="anchor" href="#_content_future"></a>Content (future)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The exact keys and structure for <code>.devcentr.sdl</code> are not yet defined. When we add features that need per-repo configuration, we will document the tags and semantics here and in the relevant component specs. The file may be empty or contain only comments until then; Devcentr should treat a missing or empty file as “no overrides.”</p>
+</div>
+<div class="paragraph">
+<p>Example placeholder (no behavior assigned yet):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">// Per-repo Devcentr settings. See docs/specifications/per-repo-settings.
+// Keys and structure TBD as features need them.</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_relation_to_other_config"><a class="anchor" href="#_relation_to_other_config"></a>Relation to other config</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>User config:</strong> <code>%USERPROFILE%\Dev Center</code> (or equivalent) holds user- and machine-specific settings; see project vision.</p>
 </li>
 <li>
-<p><strong>Skip</strong>: npm, Nuget, Maven packages.</p>
+<p><strong>Workspace templates:</strong> The Workspace Template Manager may sync from a template repo; per-repo settings can override or extend which template applies.</p>
 </li>
-</ol>
+<li>
+<p><strong>Universal config (project vision):</strong> The vision mentions a “universal configuration file” from each repo; <code>.devcentr.sdl</code> is the Devcentr-specific instance of that idea, in SDL format.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>

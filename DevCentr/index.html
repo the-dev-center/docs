@@ -72,6 +72,9 @@
     <a class="nav-link" href="index.html">Dev Center</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="docs-organization.html">Doc Organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="project-vision.html">Project Vision</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -142,10 +145,13 @@
     <a class="nav-link" href="knowledge-base/how-to/git-recovery.html">Git Recovery</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="knowledge-base/how-to/kvm-windows-automation.html">Windows Automation via KVM</a>
+    <a class="nav-link" href="knowledge-base/how-to/github-pages-custom-domain.html">GitHub Pages Custom Domain</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="knowledge-base/how-to/github-pages-custom-domain.html">GitHub Pages Custom Domain</a>
+    <a class="nav-link" href="knowledge-base/how-to/git-release-workflow.html">Git Release Workflow</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="knowledge-base/how-to/automated-releases.html">Automated Releases</a>
   </li>
 </ul>
   </li>
@@ -166,6 +172,9 @@
     <a class="nav-link" href="knowledge-base/reference/git-management.html">Git Management</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="knowledge-base/reference/github-actions-templates-vs-marketplace.html">Actions Templates vs Marketplace</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="knowledge-base/reference/git-installation.html">Git Installation</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -173,6 +182,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="knowledge-base/reference/asciidoc-tools.html">AsciiDoc Tooling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="knowledge-base/reference/package-registries.html">Package Registries</a>
   </li>
 </ul>
   </li>
@@ -359,18 +371,6 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="publishing/index.html">Publishing</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="publishing/git-release-workflow.html">Git Release Workflow</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="publishing/automated-releases.html">Automated Releases</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="publishing/package-registries.html">Package Registries</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="publishing/antora-deployment.html">Antora Deployment</a>
-  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="0">
@@ -444,27 +444,41 @@
 <div class="paragraph">
 <p>Welcome to the DevCentr documentation.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This site documents the <strong>DevCentr</strong> app (developer tooling, workflows, and project management), the <strong>Dev Center Knowledge Base</strong> (practices and reference material), and related <strong>publishing</strong> and <strong>contribution</strong> guides. Use the links below to jump to a section or start with the Knowledge Base for onboarding and how-tos.</p>
+</div>
 <div class="paragraph">
 <p>DevCentr is a developer tooling application that provides:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Developer tooling setup</p>
-</li>
-<li>
-<p>Workflow management</p>
-</li>
-<li>
-<p>Software project management</p>
+<p>Developer tool setup</p>
 </li>
 <li>
 <p>Environment management</p>
 </li>
 <li>
+<p>Project modeling and visualization</p>
+</li>
+<li>
+<p>Repository management and connections</p>
+</li>
+<li>
+<p>CI/CD workflow management</p>
+</li>
+<li>
 <p>Central secrets registry (<a href="secrets-manager/index.html" class="xref page">Secrets Manager</a>) for .env-aware key storage and optional injection</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>We have coined a new term for our kind of software: we call this a Development Orchestration Suite (DOS).</p>
 </div>
 </div>
 </div>
@@ -584,27 +598,81 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="_documentation_structure"><a class="anchor" href="#_documentation_structure"></a>Documentation Structure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This documentation site mixes two ways of grouping content and this section explains how they fit together.</p>
+</div>
+<div class="sect2">
+<h3 id="_two_organization_philosophies_in_this_site"><a class="anchor" href="#_two_organization_philosophies_in_this_site"></a>Two Organization Philosophies in This Site</h3>
+<div class="paragraph">
+<p>The DevCentr docs currently mix two ways of grouping content:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Product/feature modules</strong> — ROOT (overview, vision), specifications (component specs), secrets-manager (one product area), publishing (release/distribution), upstream-contributions. Each module is tied to a <strong>thing</strong> or <strong>workflow</strong>.</p>
+</li>
+<li>
+<p><strong>Intent-based (Diátaxis) module</strong> — knowledge-base. Content is grouped by <strong>user intent</strong>: tutorials, how-to, reference, explanation. It is topic-agnostic and acts as shared "best practices and reference" for the whole ecosystem.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>So: <strong>everything in the docs is documentation; not everything is in the knowledge-base module.</strong> The knowledge-base is the shared, intent-first content that doesn’t belong to a single product.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_quick_links"><a class="anchor" href="#_quick_links"></a>Quick Links</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="project-vision.html" class="xref page">Project Vision</a> - Learn about the project&#8217;s goals and design philosophy</p>
+<p><a href="project-vision.html" class="xref page">Project Vision</a> — Goals and design philosophy</p>
 </li>
 <li>
-<p><a href="todo-roadmap.html" class="xref page">Todo &amp; Roadmap</a> - Outstanding tasks and development roadmap</p>
+<p><a href="todo-roadmap.html" class="xref page">Todo &amp; Roadmap</a> — Outstanding tasks and roadmap</p>
 </li>
 <li>
-<p><a href="activity-log.html" class="xref page">Activity Log</a> - Notable changes and documentation updates</p>
+<p><a href="activity-log.html" class="xref page">Activity Log</a> — Notable changes and doc updates</p>
 </li>
 <li>
-<p><a href="knowledge-base/index.html" class="xref page">Knowledge Base</a> - Best practices and technical knowledge</p>
+<p><a href="upstream-contributions/index.html" class="xref page">Upstream Contributions</a> — Repositories we contribute to and depend on</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="specifications/index.html" class="xref page">Component Specifications</a> — Technical specs for components and features</p>
 </li>
 <li>
-<p><a href="specifications/index.html" class="xref page">Component Specifications</a> - Technical specifications for components and features</p>
+<p><a href="publishing/index.html" class="xref page">Software Publishing</a> — Release workflow, automation, and package registries</p>
 </li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Related Products:</p>
+</div>
+<div class="ulist">
+<ul>
 <li>
-<p><a href="secrets-manager/index.html" class="xref page">Secrets Manager</a> - Central registry for keys, .env copy/inject, and Docker integration</p>
+<p><a href="secrets-manager/index.html" class="xref page">Secrets Manager</a> — Central registry for keys, .env copy/inject, and Docker</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Knowledge-base:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="knowledge-base/index.html" class="xref page">Knowledge Base</a> — Tutorials, how-tos, reference, and explanations of common development tools and practices (Diátaxis-organized)</p>
 </li>
 </ul>
 </div>

@@ -72,6 +72,9 @@
     <a class="nav-link" href="../index.html">Dev Center</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../docs-organization.html">Doc Organization</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../project-vision.html">Project Vision</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -142,10 +145,13 @@
     <a class="nav-link" href="../knowledge-base/how-to/git-recovery.html">Git Recovery</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../knowledge-base/how-to/kvm-windows-automation.html">Windows Automation via KVM</a>
+    <a class="nav-link" href="../knowledge-base/how-to/github-pages-custom-domain.html">GitHub Pages Custom Domain</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../knowledge-base/how-to/github-pages-custom-domain.html">GitHub Pages Custom Domain</a>
+    <a class="nav-link" href="../knowledge-base/how-to/git-release-workflow.html">Git Release Workflow</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/how-to/automated-releases.html">Automated Releases</a>
   </li>
 </ul>
   </li>
@@ -166,6 +172,9 @@
     <a class="nav-link" href="../knowledge-base/reference/git-management.html">Git Management</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/reference/github-actions-templates-vs-marketplace.html">Actions Templates vs Marketplace</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../knowledge-base/reference/git-installation.html">Git Installation</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -173,6 +182,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../knowledge-base/reference/asciidoc-tools.html">AsciiDoc Tooling</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../knowledge-base/reference/package-registries.html">Package Registries</a>
   </li>
 </ul>
   </li>
@@ -359,18 +371,6 @@
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="index.html">Publishing</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="git-release-workflow.html">Git Release Workflow</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="automated-releases.html">Automated Releases</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="package-registries.html">Package Registries</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="antora-deployment.html">Antora Deployment</a>
-  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="0">
@@ -445,17 +445,77 @@
 <p>Welcome to the Software Publishing Hub.</p>
 </div>
 <div class="paragraph">
-<p>This section covers strategies, tutorials, and best practices for distributing your software effectively.</p>
+<p>This section explains how DevCentr uses the general-purpose publishing knowledge-base articles to help you configure releases from inside the app.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_tutorials"><a class="anchor" href="#_tutorials"></a>Tutorials</h2>
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>Publishing</strong> view in the DevCentr app surfaces curated knowledge-base articles directly in the in-app docs viewer while you are configuring your release/deploy process. Instead of duplicating content here, DevCentr points to the shared <strong>Knowledge Base</strong> so the guidance stays reusable and tool-agnostic.</p>
+</div>
+<div class="paragraph">
+<p>Conceptually, publishing covers the full path from <strong>\"when is something a release?\"</strong> to <strong>\"where do I publish it?\"</strong> and <strong>\"how do I automate builds and artifacts?\"</strong>. Antora doc-site deployment is maintained in the antora-supplemental organization; see the link below.</p>
+</div>
+<div class="paragraph">
+<p>When you open the Publishing area in DevCentr, the app loads these knowledge-base pages into its documentation viewer so you can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Design a Git release workflow while looking at your repos and workflows.</p>
+</li>
+<li>
+<p>Wire up automated builds and uploads in CI.</p>
+</li>
+<li>
+<p>Decide which registries (npm, PyPI, crates.io, Winget, Homebrew, Docker, etc.) make sense for your project.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_packagehub"><a class="anchor" href="#_packagehub"></a>PackageHub</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>packagehub</code> is a DevCentr project focused on improving how software is published and released.</p>
+</div>
+<div class="paragraph">
+<p>The primary documentation for PackageHub lives in its own docs site (built with Fumadocs), not in this Antora component. Use these links for details, guides, and API/CLI docs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.packagehub.dev">docs.packagehub.dev</a></p>
+</li>
+<li>
+<p><a href="https://packagehub.dev/docs">packagehub.dev/docs</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>DevCentr’s Publishing view can link you into the appropriate PackageHub docs while still relying on the shared knowledge-base articles above for the underlying concepts and best practices.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_in_this_section"><a class="anchor" href="#_in_this_section"></a>In This Section</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="git-release-workflow.html" class="xref page">Git Release Workflow</a> - Determine when and how to "release" your software.</p>
+<p><a href="../knowledge-base/how-to/git-release-workflow.html" class="xref page">Git Release Workflow</a> — When and how to treat work as a "release" (general guide)</p>
+</li>
+<li>
+<p><a href="../knowledge-base/how-to/automated-releases.html" class="xref page">Automated Releases</a> — Building and attaching binaries with GitHub Actions (general guide)</p>
+</li>
+<li>
+<p><a href="../knowledge-base/reference/package-registries.html" class="xref page">Package Registries</a> — Choosing where to publish (ecosystem registries, GitHub, package managers)</p>
+</li>
+<li>
+<p><a href="https://antora-supplemental.github.io/docs/">Antora deployment and doc-site build</a> — Root vs. subfolder strategy, CI, GitHub Pages, and multi-repo playbooks (hosted in antora-supplemental docs)</p>
 </li>
 </ul>
 </div>
